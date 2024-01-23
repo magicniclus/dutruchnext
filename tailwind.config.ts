@@ -23,8 +23,9 @@ const config: Config = {
     },
     fontFamily: {
       bebas : ['Bebas Neue', 'sans-serif'],
-        source: ['Source Sans 3', 'sans-serif'],
-      },
+      source: ['Source Sans 3', 'sans-serif'],
+      cormorant: ['Cormorant Garamond', 'serif'],
+    },
   },
   plugins: [],
 };
