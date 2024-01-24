@@ -18,7 +18,11 @@ const bottle= [
     }
 ]
 
-const Bottles = () => {
+interface BottlesProps {
+    lang: "fr" | "eng";
+}
+
+const Bottles = ({lang}: BottlesProps) => {
 
     const [bottleIdx, setBottleIdx] = useState<number | null>(null);
 
