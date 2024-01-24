@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Who from "./components/Who";
 import Lightbox from "./components/Lightbox";
+import Bottles from "./components/Bottles";
 
 import { RootState } from '@/redux/store';
 
@@ -46,9 +47,10 @@ export default function Home() {
           <Hero />
           <Who lang={languageKey} />
           <Lightbox />
-          <div className={`w-full bg-cover bg-right py-20 ${showBackground ? 'bg-[url("/background/dessin-marie.png")]' : ''}`}>
+          <div className={`w-full py-20 ${showBackground ? 'bg-[url("/background/dessin-marie.png")] bg-top' : ''}`} style={{ backgroundSize: '100% auto', backgroundRepeat: 'no-repeat' }}>
             <Descritption lang={languageKey} />
-          </div>
+            <Bottles />
+        </div>
         </main>
     </>
   );
