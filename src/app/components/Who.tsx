@@ -5,7 +5,7 @@ interface WhoProps {
   lang: "fr" | "eng";
 }
 
-const Who = ({ lang = "fr" }: WhoProps) => {
+const Who = ({ lang }: WhoProps) => {
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
