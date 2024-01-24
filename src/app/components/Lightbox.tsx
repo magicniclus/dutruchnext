@@ -5,14 +5,26 @@ import { useState, useEffect, useRef} from "react";
 
 import gsap from "gsap";
 
+const textImage = [
+    "Des vignes plantées à 80% Sur le plateau de Grand Poujeaux",
+    "Des vendanges 100% manuelles Pour notre premier vin",
+    "Sol de graves garonnaises, meilleur terroir du médoc",
+    "François cordonnier (junior), propriétaire depuis 2016",
+    "Élevage en barriques De chêne français",
+    "Château dutruch Grand Poujeaux : Fraîcheur, finesse et élégance",
+    "Propriété du château Dutruch Grand Poujeaux"
+]
+
 export default function Lightbox() {
     const [currentImage, setCurrentImage] = useState<number>(1);
     const [nextImage, setNextImage] = useState<number>(2);
+    const [disabled, setDisabled] = useState<boolean>(false);
 
     const currentImageRef = useRef(null);
     const nextImageRef = useRef(null);
 
     const handleImage = (action: string) => {
+        setDisabled(true);
         const isIncrement = action === "increment";
         const newCurrentImage = isIncrement ? (currentImage === 7 ? 1 : currentImage + 1) : (currentImage === 1 ? 7 : currentImage - 1);
         
@@ -44,6 +56,7 @@ export default function Lightbox() {
                     } else {
                         setNextImage(newPrevImage);
                     }
+                    setDisabled(false);
                 }
             });
 
@@ -67,45 +80,64 @@ export default function Lightbox() {
 
     return (
         <section className='w-full bg-cover bg-center'>
-            <div className="mx-auto flex max-w-5xl py-2 justify-center items-center min-h-[392px] w-full">
-                <div className="w-full overflow-hidden relative flex min-h-[550px]">
-                    <div className="absolute py-3 px-5 rounded-l-full bg-white right-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("increment")}>
+            <div className="mx-auto flex max-w-5xl py-2 justify-center items-center w-full">
+                <div className="w-full overflow-hidden relative flex md:min-h-[550px] min-h-[400px]">
+
+                    {/** Navigation button */}
+                    <button className="absolute py-3 px-5 rounded-l-full bg-white right-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("increment")} disabled={disabled}>
                         <Image
                             src="/icon/arrow-right.png"
                             alt="Château Dutruch Grand Poujeaux"
                             width={12}
                             height={12}
                         />
-                    </div>
-                    <div className="absolute py-3 px-5 rounded-r-full bg-white left-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("decrement")}>
+                    </button>
+                    <button className="absolute py-3 px-5 rounded-r-full bg-white left-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("decrement")} disabled={disabled}>
                         <Image
                             src="/icon/arrow-left.png"
                             alt="Château Dutruch Grand Poujeaux"
                             width={12}
                             height={12}
                         />
-                    </div>
-                    <div className="absolute right-0 bottom-0 w-full z-10" ref={currentImageRef}>
+                    </button>
+
+                    {/** Image Lightbox */}
+                    <div className="absolute right-0 bottom-0 w-full z-10 h-[100%]" ref={currentImageRef}>
                         <Image
                             src={`/lightbox/image-${currentImage}.png`}
                             alt="Château Dutruch Grand Poujeaux"
-                            width={500}
-                            height={500}
-                            objectFit="contain"
-                            layout="responsive"
+                            objectFit="cover"
+                            layout="fill"
                         />
                     </div>
-                    <div className="absolute right-0 bottom-0 w-full z-5" ref={nextImageRef}>
+                    <div className="absolute right-0 bottom-0 w-full z-5 h-[100%]" ref={nextImageRef}>
                         <Image
                             src={`/lightbox/image-${nextImage}.png`}
                             alt="Château Dutruch Grand Poujeaux"
-                            width={500}
-                            height={500}
-                            objectFit="contain"
-                            layout="responsive"
+                            objectFit="cover"
+                            layout="fill"
                         />
                     </div>
+
+                    {/** Text container */}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[195px] h-[45px] px-2 bg-white z-40 flex justify-center items-center">
+                        {
+                                <p className="text-center text-[10px] leading-[13px] font-bold text-red font-source uppercase">
+                                    {textImage[currentImage-1]}
+                                </p>
+                        }
+                    </div>
                 </div>
+            </div>
+            <div className="my-5 flex items-center justify-center">
+                {
+                    [1,2,3,4,5,6,7].map((item, index) => {
+                        return (
+                            <div key={index} className={`w-[10px] h-[10px] rounded-full ${index + 1 === currentImage ? "bg-red":"bg-gray"} cursor-pointer mx-1`} onClick={() => setCurrentImage(item)}>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </section>
     )
