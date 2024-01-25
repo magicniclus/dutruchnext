@@ -49,7 +49,7 @@ export default function Home() {
           <Lightbox />
           <div className={`w-full py-20 ${showBackground ? 'bg-[url("/background/dessin-marie.png")] bg-top' : ''}`} style={{ backgroundSize: '100% auto', backgroundRepeat: 'no-repeat' }}>
             <Descritption lang={languageKey} />
-            <Bottles />
+            <Bottles lang={languageKey} />
         </div>
         </main>
     </>
