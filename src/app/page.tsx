@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Who from "./components/Who";
@@ -12,7 +14,7 @@ import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useRouter } from 'next/navigation'
 
 import Descritption from "./components/Descritpion";
 import Formulaire from "./components/Formulaire";
@@ -24,6 +26,8 @@ export default function Home() {
     const [showContent, setShowContent] = useState<boolean | null>(null);
 
     const isClient = typeof window === "object";
+
+    const router = useRouter();
       
     useEffect(() => {
       const handleResize = () => {
@@ -73,6 +77,7 @@ export default function Home() {
 
      const refuPage = () => {
       setShowContent(false);
+      router.push('/refus');
     }
 
   return (
