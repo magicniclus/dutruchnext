@@ -10,7 +10,7 @@ const Who = ({ lang }: WhoProps) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setShowBackground(window.innerWidth < 1440);
+      setShowBackground(window.innerWidth < 2000);
     };
 
     // Définir l'état initial en fonction de la largeur de la fenêtre
