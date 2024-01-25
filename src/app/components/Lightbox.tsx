@@ -23,17 +23,17 @@ export default function Lightbox() {
     const currentImageRef = useRef(null);
     const nextImageRef = useRef(null);
 
-    const [startX, setStartX] = useState(0);
+   const [startX, setStartX] = useState<number>(0);
 
-    const handleTouchStart = (e) => {
+    const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
         setStartX(e.touches[0].clientX);
     };
 
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
         setStartX(e.clientX);
     };
 
-    const handleEnd = (currentX) => {
+    const handleEnd = (currentX: number) => {
         if (currentX > startX) {
         handleImage("increment");
         } else if (currentX < startX) {
@@ -41,11 +41,11 @@ export default function Lightbox() {
         }
     };
 
-    const handleTouchEnd = (e) => {
+    const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
         handleEnd(e.changedTouches[0].clientX);
     };
 
-    const handleMouseUp = (e) => {
+    const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
         handleEnd(e.clientX);
     };
 
