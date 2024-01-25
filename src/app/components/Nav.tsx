@@ -30,7 +30,7 @@ const Nav = () => {
         <nav className='w-full bg-background'>
             <div className='mx-auto flex max-w-5xl px-4 py-2 justify-between items-center'>
                 <div className='flex space-x-4'>
-                    <a href='/' className='text-primary font-bold text-2xl'>
+                    <a href='/' className='text-primary font-bold text-2xl sm:block hidden '>
                         <Image src='/logo/logo-nav.png' alt='Château Dutruch Grand Poujeaux' width={200} height={200} />
                     </a>
                 </div>
