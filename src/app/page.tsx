@@ -59,7 +59,7 @@ export default function Home() {
                 <img src="/background/toiture.png" alt="" className="absolute -top-[0px] max-w-[700px] left-0 w-full h-full object-cover md:block hidden" />
               )
             }
-            <Formulaire />
+            <Formulaire lang={languageKey} />
           </div>
         </main>
         <Footer />
