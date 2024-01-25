@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className=' py-7 bg-white mx-auto flex md:flex-row flex-col max-w-5xl justify-between w-full'>
+            <div className=' py-7 px-4 bg-white mx-auto flex md:flex-row flex-col max-w-5xl justify-between w-full'>
                 <div className='flex'>
                     <img src="/logo/exploitation.png" className='max-w-[244px] mx-auto' />
                     <img src="/logo/independant.png" className='max-w-[244px] mx-auto ml-3' />
