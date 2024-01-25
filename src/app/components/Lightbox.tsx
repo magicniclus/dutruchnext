@@ -23,6 +23,32 @@ export default function Lightbox() {
     const currentImageRef = useRef(null);
     const nextImageRef = useRef(null);
 
+    const [startX, setStartX] = useState(0);
+
+    const handleTouchStart = (e) => {
+        setStartX(e.touches[0].clientX);
+    };
+
+    const handleMouseDown = (e) => {
+        setStartX(e.clientX);
+    };
+
+    const handleEnd = (currentX) => {
+        if (currentX > startX) {
+        handleImage("increment");
+        } else if (currentX < startX) {
+        handleImage("decrement");
+        }
+    };
+
+    const handleTouchEnd = (e) => {
+        handleEnd(e.changedTouches[0].clientX);
+    };
+
+    const handleMouseUp = (e) => {
+        handleEnd(e.clientX);
+    };
+
     const handleImage = (action: string) => {
         setDisabled(true);
         const isIncrement = action === "increment";
@@ -81,7 +107,13 @@ export default function Lightbox() {
     return (
         <section className='w-full bg-cover bg-center'>
             <div className="mx-auto flex max-w-5xl py-2 justify-center items-center w-full">
-                <div className="w-full overflow-hidden relative flex md:min-h-[550px] min-h-[400px]">
+                <div 
+                    className="w-full overflow-hidden relative flex md:min-h-[550px] min-h-[400px]"
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                    onMouseDown={handleMouseDown}
+                    onMouseUp={handleMouseUp}
+                >
 
                     {/** Navigation button */}
                     <button className="absolute py-3 px-5 rounded-l-full bg-white right-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("increment")} disabled={disabled}>
