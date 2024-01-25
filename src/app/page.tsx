@@ -49,19 +49,15 @@ export default function Home() {
           <Hero />
           <Who lang={languageKey} />
           <Lightbox />
-          <div className={`w-full md:pt-20 md:py-0 py-20 relative ${showBackground ? 'with-background' : ''}`}>
-            {showBackground && (
-              <div className="absolute top-0 left-0 w-full h-full">
-                <img src="/background/dessin-marie.png" className="w-full h-[95%] object-cover" alt="Background" />
-              </div>
-            )}
-
+          <div className={`w-full md:pt-20 md:py-0 py-20 ${showBackground ? 'bg-[url("/background/dessin-marie.png")] bg-top' : ''}`} style={{ backgroundSize: '100% auto', backgroundRepeat: 'no-repeat' }}>
             <Descritption lang={languageKey} />
             <Bottles lang={languageKey} />
           </div>
-          <div className="relative min-h-[550px]">
+          <div className="relative">
             {
-              showBackground ? <img src="/background/toiture.png" alt="" className="absolute -top-5 left-0 w-[40%] h-full object-cover" /> : ''
+              showBackground && (
+                <img src="/background/toiture.png" alt="" className="absolute -top-[0px] max-w-[700px] left-0 w-full h-full object-cover md:block hidden" />
+              )
             }
             <Formulaire />
           </div>
