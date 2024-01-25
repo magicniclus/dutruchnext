@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Who from "./components/Who";
 import Lightbox from "./components/Lightbox";
 import Bottles from "./components/Bottles";
+import Footer from "./components/Footer";
 
 import { RootState } from '@/redux/store';
 
@@ -14,6 +15,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 import Descritption from "./components/Descritpion";
+import Formulaire from "./components/Formulaire";
 
 export default function Home() {
     
@@ -21,7 +23,7 @@ export default function Home() {
       
     useEffect(() => {
       const handleResize = () => {
-      setShowBackground(window.innerWidth < 1440);
+      setShowBackground(window.innerWidth < 2000);
     };
 
     // Définir l'état initial en fonction de la largeur de la fenêtre
@@ -47,11 +49,24 @@ export default function Home() {
           <Hero />
           <Who lang={languageKey} />
           <Lightbox />
-          <div className={`w-full py-20 ${showBackground ? 'bg-[url("/background/dessin-marie.png")] bg-top' : ''}`} style={{ backgroundSize: '100% auto', backgroundRepeat: 'no-repeat' }}>
+          <div className={`w-full md:pt-20 md:py-0 py-20 relative ${showBackground ? 'with-background' : ''}`}>
+            {showBackground && (
+              <div className="absolute top-0 left-0 w-full h-full">
+                <img src="/background/dessin-marie.png" className="w-full h-[95%] object-cover" alt="Background" />
+              </div>
+            )}
+
             <Descritption lang={languageKey} />
             <Bottles lang={languageKey} />
-        </div>
+          </div>
+          <div className="relative min-h-[550px]">
+            {
+              showBackground ? <img src="/background/toiture.png" alt="" className="absolute -top-5 left-0 w-[40%] h-full object-cover" /> : ''
+            }
+            <Formulaire />
+          </div>
         </main>
+        <Footer />
     </>
   );
 }
