@@ -30,7 +30,6 @@ const Page = () => {
                             width={300}
                             height={200}
                             onLoadingComplete={() => setImage1Loaded(true)}
-                            // style={{ display: image1Loaded ? 'none' : 'block' }}
                         />
                         <div className="mt-10 flex items-end">
                             <div className='w-14 h-0.5 bg-red mb-1'></div>
@@ -41,7 +40,6 @@ const Page = () => {
                                 width={150}
                                 height={50}
                                 onLoadingComplete={() => setImage2Loaded(true)}
-                                // style={{ display: image2Loaded ? 'none' : 'block' }}
                             />
                             <div className='w-14 h-0.5 bg-red mb-1'></div>
                         </div>
