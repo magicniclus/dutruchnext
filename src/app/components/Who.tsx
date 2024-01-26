@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Définir les types de props pour le composant
 interface WhoProps {
@@ -7,6 +11,13 @@ interface WhoProps {
 
 const Who = ({ lang }: WhoProps) => {
   const [showBackground, setShowBackground] = useState(false);
+  
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const textRefOne = useRef(null);
+  const textRefTwo = useRef(null);
+  const buttonRef = useRef(null);
+  const lignRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,18 +30,37 @@ const Who = ({ lang }: WhoProps) => {
     // Ajouter le gestionnaire d'événements pour le redimensionnement
     window.addEventListener('resize', handleResize);
 
-    // Nettoyer le gestionnaire d'événements lors du démontage
-    return () => window.removeEventListener('resize', handleResize);
+    //Timeline
+    const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: textRefOne.current, // Vous pourriez vouloir ajuster ceci selon le meilleur élément déclencheur
+          start: 'top 70%', // Ajustez selon vos besoins
+          toggleActions: 'play play none none',
+          // markers: true
+        }
+      });
+
+      // Ajouter des animations à la timeline
+      tl.fromTo(titleRef.current, { opacity: 0 }, { opacity: 1, duration: 1, delay: 0.6 }, 0)
+        .fromTo(subtitleRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 0.8) // Décalage de 0.2s
+        .fromTo(textRefOne.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 1) // Décalage de 0.4s
+        .fromTo(textRefTwo.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 1.2) // Décalage de 0.6s
+        .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 1.4) // Décalage de 0.8s
+        .fromTo(lignRef.current, { x: -100 }, { x: 0, duration: 1 }, 0.8);
+
+        return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const textFr = ()=>{
     return (
         <section>
-            <h1 className="text-red font-bebas text-3xl">Grand poujeaux</h1>
-            <h2 className='font-bebas text-xl text-text'>Le meilleur terroir de moulis-en-médoc</h2>
-            <div className="w-[84px] h-0.5 bg-red mt-4"></div>
-            <div className='font-cormorant mt-10 text-text'>
-                <p>
+            <h1 className="text-red font-bebas text-3xl opacity-0" ref={titleRef}>Grand poujeaux</h1>
+            <h2 className='font-bebas text-xl text-text  opacity-0' ref={subtitleRef}>Le meilleur terroir de moulis-en-médoc</h2>
+            <div className='overflow-hidden'>
+              <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
+            </div>
+            <div ref={textRefOne} className='font-cormorant mt-10 text-text'>
+                <p className='opacity-0'>
                     Situées à l’extrême Est de l’appellation Moulis, nos vignes sont plantées 
                 </p>
                 <ul>
@@ -41,7 +71,7 @@ const Who = ({ lang }: WhoProps) => {
                     Cette diversité apporte à nos vins une grande complexité et une grande richesse.
                 </p>
             </div>
-            <div className='font-cormorant mt-10'>
+            <div ref={textRefTwo} className='font-cormorant mt-10 opacity-0'>
                 <p>
                     Le terroir Grand Poujeaux doit son excellence et sa réputation prestigieuse :
                 </p>
@@ -53,7 +83,7 @@ const Who = ({ lang }: WhoProps) => {
                     permettent une maturation optimale des raisins.
                 </p>
             </div>
-            <button className='text-white bg-red py-3 px-4 rounded-full normal-lg mt-10'>DÉCOUVRIR NOS VINS</button>
+            <button ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full normal-lg mt-10 opacity-0'>DÉCOUVRIR NOS VINS</button>
         </section>
     )
   }
