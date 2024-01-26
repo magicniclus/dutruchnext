@@ -1,4 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
+
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const bottle= [
     {
@@ -23,6 +28,8 @@ interface BottlesProps {
 const Bottles = ({lang}: BottlesProps) => {
 
     const [bottleIdx, setBottleIdx] = useState<number | null>(null);
+
+    const bottleRef = useRef(null);
 
     const handleBottleInformations = (index: number) => {
         console.log(index);
@@ -67,7 +74,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 uppercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>0% terres argilo-calcaires</li>
@@ -76,7 +83,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>0% terres argilo-calcaires</li>
@@ -85,7 +92,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>0% terres argilo-calcaires</li>
@@ -147,7 +154,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 uppercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>0% terres argilo-calcaires</li>
@@ -156,7 +163,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>0% terres argilo-calcaires</li>
@@ -165,7 +172,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>0% terres argilo-calcaires</li>
@@ -230,7 +237,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 uppercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>10% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% terres argilo-calcaires</li>
@@ -239,7 +246,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>vendanges mécaniques</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>cuves béton et inox thermorégulées</li>
@@ -247,7 +254,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>18 mois dont 12 en cuves béton et barriques de chêne français</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>2/3 en cuves béton et 1/3 de barriques de 3 vins et plus</li>
@@ -303,7 +310,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 uppercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>10% graves garonnaises (plateau de Grand Poujeaux)</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% terres argilo-calcaires</li>
@@ -312,7 +319,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>vendanges mécaniques</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>cuves béton et inox thermorégulées</li>
@@ -320,7 +327,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>18 mois dont 12 en cuves béton et barriques de chêne français</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>2/3 en cuves béton et 1/3 de barriques de 3 vins et plus</li>
@@ -379,7 +386,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 upercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises profondes</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>10% argiles et argilo-calcaires</li>
@@ -387,7 +394,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 upercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>vendanges mécaniques</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>cuves béton et inox thermorégulées</li>
@@ -395,7 +402,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 upercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>100% barriques de chêne français</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>50% de barriques neuves et 50% de barriques de 1 vin</li>
@@ -404,7 +411,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                         </div>
                         <div className='md:mt-0 mt-5'>
-                            <h3 className='font-bebas text-xl text-text mb-1'>DÉGUSTATION</h3>
+                            <h3 className='font-bebas text-xl text-text mb-1 upercase'>DÉGUSTATION</h3>
                             <p className='font-cormorant text-text'>
                                Le nez de fruits mûrs, framboises, cassis est d’une grande profondeur et est complété par de subtiles arômes de bois grillé. L’attaque est franche et précise, la bouche riche, ample et fraîche. Nous retrouvons la puissance subtile des grands Médoc, le tout avec un équilibre remarquable. Les tanins sont présents mais déjà fondus, la finale est longue, fraîche et sapide.
                             </p>
@@ -452,7 +459,7 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 upercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>90% graves garonnaises profondes</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>10% argiles et argilo-calcaires</li>
@@ -460,7 +467,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 upercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>vendanges mécaniques</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>cuves béton et inox thermorégulées</li>
@@ -468,7 +475,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 upercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>100% barriques de chêne français</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>50% de barriques neuves et 50% de barriques de 1 vin</li>
@@ -528,14 +535,14 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 uppercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>100% terres argileuses</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>âge moyen du vignoble : 25 ans</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>Vinification</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>vendanges mécaniques</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>cuves béton et inox thermorégulées</li>
@@ -543,10 +550,10 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
-                                        <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>30% en amphores</li>
-                                        <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>70% en barriques de 1 et 2 vins</li>
+                                        <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>6 mois</li>
+                                        <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>30% en amphores / 70% en barriques de 1 vin</li>
                                     </ul>
                                 </div>
                             </div>
@@ -600,14 +607,14 @@ const Bottles = ({lang}: BottlesProps) => {
                             </div>
                             <div className='flex flex-col justify-around'>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 uppercase'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>100% terres argileuses</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>âge moyen du vignoble : 25 ans</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>VINIFICATION</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>vendanges mécaniques</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>cuves béton et inox thermorégulées</li>
@@ -615,7 +622,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4'>Terroir & vignoble</h3>
+                                    <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>30% en amphores</li>
                                         <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>70% en barriques de 1 et 2 vins</li>
@@ -655,7 +662,7 @@ const Bottles = ({lang}: BottlesProps) => {
     return (
         <>
             <section className="mx-auto flex flex-col max-w-5xl py-2 px-4 min-h-[392px] w-full">
-                <div className='w-full flex justify-between flex-col md:flex-row'>
+                <div className='w-full flex justify-between flex-col md:flex-row' ref={bottleRef}>
                     {bottle.map((bottle, index) => (
                         <div key={index} className='group relative flex-1 flex flex-col items-center md:w-[22%] justify-between font-bebas md:mt-0 mt-10'>
                             <div className='relative'>
@@ -674,11 +681,11 @@ const Bottles = ({lang}: BottlesProps) => {
                             <h2 className='text-text text-center uppercase max-w-[70%] font-bold text-2xl transition-colors duration-300 ease-in-out md:group-hover:text-red'>
                                  {index === bottleIdx ? "" : bottle.title}
                             </h2>
-                            <div className={`absolute ${index === bottleIdx ? "h-[90px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[55px]"} w-0.5 bg-red -bottom-20 md:flex hidden`}></div>
+                            <div className={`absolute ${index === bottleIdx ? "h-[90px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[90px]"} w-0.5 bg-red -bottom-24 md:flex hidden`}></div>
                             <div className='mx-auto flex flex-col max-w-5xl py-2 px-4 w-full'>
                                 {
                                     bottleIdx !== null && bottleIdx === index && (
-                                        <div className='md:hidden relative w-full min-h-[500px] border border-red mx-auto flex max-w-5xl p-5 mt-16 bg-white z-10'>
+                                        <div className={`md:hidden relative w-full min-h-[500px] border border-red mx-auto flex max-w-5xl p-5 mt-16 bg-white z-10 transition duration-150 ease-in-out ${bottleIdx !== null ? "opacity-100" : "opacity-0" }`}>
                                             <div className={`absolute ${index === bottleIdx ? "h-[50px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[50px]"} w-0.5 bg-red -top-[50px] md:hidden flex left-1/2 transform -translate-x-1/2 `}></div>
                                             <div className='absolute p-1 top-3 md:top-5 right-3 md:right-5 rounded-full border border-red cursor-pointer hover:scale-105 transition duration-300 ease-in-out' onClick={()=>{setBottleIdx(null)}}><img src="/icon/close.png" /></div>
                                             {
@@ -695,7 +702,7 @@ const Bottles = ({lang}: BottlesProps) => {
             <section className='mx-auto flex flex-col max-w-5xl py-2 px-4 w-full'>
                 {
                     bottleIdx !== null && (
-                        <div className='hidden relative w-full border border-red mx-auto md:flex max-w-5xl p-5 mt-16 bg-white z-10'>
+                        <div className={`relative w-full border border-red mx-auto md:flex max-w-5xl p-5 mt-16 bg-white z-10 transition duration-300 ease-in-out ${bottleIdx !== null ? "opacity-100 visible" : "opacity-0 invisible"}`}>
                             <div className='absolute p-1 top-5 right-5 rounded-full border border-red cursor-pointer hover:scale-105 transition duration-300 ease-in-out' onClick={()=>{setBottleIdx(null)}}>
                                 <img src="/icon/close.png" />
                             </div>
