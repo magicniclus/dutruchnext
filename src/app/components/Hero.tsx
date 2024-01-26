@@ -18,11 +18,13 @@ const Hero = () => {
 
     useEffect(() => {
         if (validationAge) {
-            // Si validationAge est true, déclencher l'animation
-            gsap.fromTo(imageRefOne.current, { opacity: 0 }, { opacity:1 , duration: 1, ease: "power1.inOut" });
-            gsap.fromTo(imageRefTwo.current, { y: 90 }, { y: 0, duration: 1, ease: "power1.inOut", delay: 0.1 });
-            gsap.fromTo(lignOne.current, { x: -100 }, { x: 0, duration: 1, ease: "power1.inOut", delay: 0.2 });
-            gsap.fromTo(lignTwo.current, { x: 100 }, { x: 0, duration: 1, ease: "power1.inOut", delay: 0.2 });
+            if(validationAge){
+                // Si validationAge est true, déclencher l'animation
+                gsap.fromTo(imageRefOne.current, { opacity: 0 }, { opacity:1 , duration: 1, ease: "power1.inOut" });
+                gsap.fromTo(imageRefTwo.current, { y: 90 }, { y: 0, duration: 1, ease: "power1.inOut", delay: 0.1 });
+                gsap.fromTo(lignOne.current, { x: -100 }, { x: 0, duration: 1, ease: "power1.inOut", delay: 0.2 });
+                gsap.fromTo(lignTwo.current, { x: 100 }, { x: 0, duration: 1, ease: "power1.inOut", delay: 0.2 });
+            }
         }
     }, [validationAge]);
 
