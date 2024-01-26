@@ -4,6 +4,9 @@ import Image from "next/image";
 import { useState, useEffect, useRef} from "react";
 
 import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const textImage = [
     "Des vignes plantées à 80% Sur le plateau de Grand Poujeaux",
@@ -22,6 +25,8 @@ export default function Lightbox() {
 
     const currentImageRef = useRef(null);
     const nextImageRef = useRef(null);
+    const lightboxRef = useRef(null);
+    const buttonRef = useRef(null);
 
    const [startX, setStartX] = useState<number>(0);
 
@@ -104,9 +109,24 @@ export default function Lightbox() {
         }
     }, [currentImage]);
 
+    useEffect(() => {
+        gsap.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 1, delay: 1.7 })
+
+    //     const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: lightboxRef.current, // Vous pourriez vouloir ajuster ceci selon le meilleur élément déclencheur
+    //       start: 'top 90%', // Ajustez selon vos besoins
+    //       toggleActions: 'play none none none',
+    //     //   markers: true
+    //     }
+    //   });
+    //   tl.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 0)
+    //     .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 0.2) // Décalage de 0.2s
+    }, []);
+
     return (
         <section className='w-full bg-cover bg-center'>
-            <div className="mx-auto flex max-w-5xl py-2 justify-center items-center w-full">
+            <div className="mx-auto flex max-w-5xl py-2 justify-center items-center w-full opacity-0" ref={lightboxRef}>
                 <div 
                     className="w-full overflow-hidden relative flex md:min-h-[550px] min-h-[400px]"
                     onTouchStart={handleTouchStart}
@@ -161,7 +181,7 @@ export default function Lightbox() {
                     </div>
                 </div>
             </div>
-            <div className="my-5 flex items-center justify-center">
+            <div className="my-5 flex items-center justify-center" ref={buttonRef}>
                 {
                     [1,2,3,4,5,6,7].map((item, index) => {
                         return (
