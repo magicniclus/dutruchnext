@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 
+import Image from "next/image";
+import { useRouter } from 'next/navigation'
+
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Who from "./components/Who";
@@ -11,74 +14,84 @@ import Footer from "./components/Footer";
 
 import { RootState } from '@/redux/store';
 
-import { useSelector } from 'react-redux';
-
-import Image from "next/image";
-import { useRouter } from 'next/navigation'
+import { useSelector, useDispatch } from 'react-redux';
+import { setValidation } from '@/redux/validationOld';
 
 import Descritption from "./components/Descritpion";
 import Formulaire from "./components/Formulaire";
 
 export default function Home() {
+
+  const dispatch = useDispatch();
+
+  type validationAge = true | false | null;
+  const validationAge = useSelector((state: RootState) => state.validationAge);
+  
+  const [showBackground, setShowBackground] = useState(false);
+
+  const [showContent, setShowContent] = useState<boolean | null>(null);
+
+  const isClient = typeof window === "object";
+
+  const router = useRouter();
     
-    const [showBackground, setShowBackground] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setShowBackground(window.innerWidth < 2000);
+    };
 
-    const [showContent, setShowContent] = useState<boolean | null>(null);
+    // Définir l'état initial en fonction de la largeur de la fenêtre
+    handleResize();
 
-    const isClient = typeof window === "object";
+    // Ajouter le gestionnaire d'événements pour le redimensionnement
+    window.addEventListener('resize', handleResize);
 
-    const router = useRouter();
-      
-    useEffect(() => {
-      const handleResize = () => {
-        setShowBackground(window.innerWidth < 2000);
-      };
+    // Nettoyer le gestionnaire d'événements lors du démontage
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-      // Définir l'état initial en fonction de la largeur de la fenêtre
-      handleResize();
+  useEffect(() => {
+    if (isClient) { 
+        // Gestion du blocage du défilement
+        const handleScroll = () => {
+            if (!showContent || showContent === null) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        };
 
-      // Ajouter le gestionnaire d'événements pour le redimensionnement
-      window.addEventListener('resize', handleResize);
+        handleScroll(); // Appel initial pour définir l'état correct du défilement
 
-      // Nettoyer le gestionnaire d'événements lors du démontage
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+        // Ajouter les gestionnaires d'événements, etc.
 
-    useEffect(() => {
-      if (isClient) { 
-          // Gestion du blocage du défilement
-          const handleScroll = () => {
-              if (!showContent || showContent === null) {
-                  document.body.style.overflow = 'hidden';
-              } else {
-                  document.body.style.overflow = '';
-              }
-          };
+        return () => {
+            // Nettoyage
+            document.body.style.overflow = ''; // Assurez-vous de réinitialiser le défilement lors du démontage
+        };
+      }
+  }, [showContent]); // Dépendance sur showContent
 
-          handleScroll(); // Appel initial pour définir l'état correct du défilement
-
-          // Ajouter les gestionnaires d'événements, etc.
-
-          return () => {
-              // Nettoyage
-              document.body.style.overflow = ''; // Assurez-vous de réinitialiser le défilement lors du démontage
-          };
-        }
-    }, [showContent]); // Dépendance sur showContent
+  useEffect(() => {
+    console.log(validationAge);
+  }, [validationAge]);
 
 
-    // Sélectionnez la clé de langue actuelle de l'état Redux
-    type LanguageKey = 'fr' | 'eng';
-    const languageKey = useSelector((state: RootState) => state.language.language) as LanguageKey;
 
-    const validationPage = () => {
-      setShowContent(true);
-    }
+  // Sélectionnez la clé de langue actuelle de l'état Redux
+  type LanguageKey = 'fr' | 'eng';
+  const languageKey = useSelector((state: RootState) => state.language.language) as LanguageKey;
 
-     const refuPage = () => {
-      setShowContent(false);
-      router.push('/refus');
-    }
+  const validationPage = () => {
+    dispatch(setValidation(true));
+    setShowContent(true);
+  }
+
+    const refuPage = () => {
+    dispatch(setValidation(false));
+    setShowContent(false);
+    router.push('/refus');
+  }
 
   return (
     <div className="relative">
@@ -95,8 +108,8 @@ export default function Home() {
                     </div>
                     <p className="text-text font-cormorant max-w-[450px] font-bold text-lg text-center mt-10">En visitant ce site, je certifie que j’ai l’âge légal pour la consommation d’alcool dans mon pays de résidence.</p>
                     <div className="mt-5">
-                      <button type="button" className="p-3 bg-red text-white text-sm rounded-l-full mr-0.5 hover:shadow-md hover:scale-105 transition duration-100 ease-in-out" onClick={validationPage}>OUI</button>
-                      <button type="button" className="p-3 bg-red text-white text-sm cursor-pointer rounded-r-full ml-0.5 hover:shadow-md hover:scale-105 transition duration-100 ease-in-out" onClick={refuPage}>NON</button>
+                      <button type="button" className="p-3 w-14  bg-red text-white text-sm rounded-l-full mr-0.5 hover:shadow-md hover:scale-105 transition duration-100 ease-in-out" onClick={validationPage}>OUI</button>
+                      <button type="button" className="p-3 w-14 bg-red text-white text-sm cursor-pointer rounded-r-full ml-0.5 hover:shadow-md hover:scale-105 transition duration-100 ease-in-out" onClick={refuPage}>NON</button>
                     </div>
                 </div>
               </div>
