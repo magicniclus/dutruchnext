@@ -1,15 +1,19 @@
-import {configureStore} from '@reduxjs/toolkit';
-
+import { combineReducers, createStore } from 'redux';
 import languageSlice from './slice';
 import validationSlice from './validationOld';
+// Importez d'autres réducteurs si nécessaire
 
-export const store = configureStore({
-    reducer: {
-        language: languageSlice,
-        validationAge: validationSlice
-    }
+// Combine tous vos réducteurs
+const rootReducer = combineReducers({
+  language: languageSlice,
+    validationAge: validationSlice
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+// Créez et exportez le type RootState basé sur le rootReducer
+export type RootState = ReturnType<typeof rootReducer>;
 
-export type AppDispatch = typeof store.dispatch;
+// Créez et exportez votre store
+export const store = createStore(rootReducer);
+
+// Vous pouvez également avoir besoin d'exporter le rootReducer selon votre configuration
+export default rootReducer;
