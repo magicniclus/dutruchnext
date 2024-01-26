@@ -1,36 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { setLanguage } from '../../redux/slice';
 import { RootState } from '@/redux/store';
+import { setLanguage } from '../../redux/slice';
 
-// Objet de langues
-import { language } from '../../lib/language';
+import gsap from 'gsap';
 
 const Nav = () => {
     const dispatch = useDispatch();
+    const validationAge = useSelector((state: RootState) => state.validationAge);
 
-    // Sélectionnez la clé de langue actuelle de l'état Redux
-    type LanguageKey = 'fr' | 'eng';
-    const languageKey = useSelector((state: RootState) => state.language.language) as LanguageKey;
-
-    // Accédez aux traductions pour la langue actuelle
-    useEffect(() => {
-        console.log(languageKey);
-        console.log(language[languageKey as keyof typeof language]);
-    }, [languageKey]);
+    const logoRef = useRef(null);
 
     const handleLanguage = (language: string) => {
         dispatch(setLanguage(language));
     };
 
+    useEffect(() => {
+        if (validationAge) {
+            // Si validationAge est true, déclencher l'animation
+            gsap.fromTo(logoRef.current, { opacity: 0 }, { opacity: 1, duration: 1, ease: "power1.inOut", delay: 0.2 });
+        }
+    }, [validationAge]);
+
     return (
         <nav className='w-full bg-background'>
-            <div className='mx-auto flex max-w-5xl px-4 py-2 justify-between items-center'>
+            <div className='mx-auto flex max-w-5xl px-4 py-2 justify-between items-center opacity-0'  ref={logoRef}>
                 <div className='flex space-x-4'>
-                    <a href='/' className='text-primary font-bold text-2xl sm:block hidden '>
+                    <a href='/' className='text-primary font-bold text-2xl sm:block hidden overflow-hidden '>
                         <Image src='/logo/logo-nav.png' alt='Château Dutruch Grand Poujeaux' width={200} height={200} />
                     </a>
                 </div>
