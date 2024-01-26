@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -51,6 +52,25 @@ const Who = ({ lang }: WhoProps) => {
         return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: textRefOne.current, // Vous pourriez vouloir ajuster ceci selon le meilleur élément déclencheur
+          start: 'top 70%', // Ajustez selon vos besoins
+          toggleActions: 'play play none none',
+          // markers: true
+        }
+      });
+
+      // Ajouter des animations à la timeline
+      tl.fromTo(titleRef.current, { opacity: 0 }, { opacity: 1, duration: 1, delay: 0.6 }, 0)
+        .fromTo(subtitleRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 0.8) // Décalage de 0.2s
+        .fromTo(textRefOne.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 1) // Décalage de 0.4s
+        .fromTo(textRefTwo.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 1.2) // Décalage de 0.6s
+        .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 1.4) // Décalage de 0.8s
+        .fromTo(lignRef.current, { x: -100 }, { x: 0, duration: 1 }, 0.8);
+  }, [lang]);
+
   const textFr = ()=>{
     return (
         <section>
@@ -59,8 +79,8 @@ const Who = ({ lang }: WhoProps) => {
             <div className='overflow-hidden'>
               <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
             </div>
-            <div ref={textRefOne} className='font-cormorant mt-10 text-text'>
-                <p className='opacity-0'>
+            <div ref={textRefOne} className='font-cormorant mt-10 text-text opacity-0'>
+                <p className=''>
                     Situées à l’extrême Est de l’appellation Moulis, nos vignes sont plantées 
                 </p>
                 <ul>
