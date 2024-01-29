@@ -22,7 +22,12 @@ export default function RootLayout({
       <html lang="fr">
         <head>
           <meta charSet="utf-8" />
-          <link rel="icon" href="/favicon/favicon.png" sizes="any" />
+          <link
+            rel="icon"
+            href="/favicon.png"
+            type="image/favicon"
+            sizes=""
+          />
         </head>
           <body className={inter.className}>{children}</body>
       </html>
