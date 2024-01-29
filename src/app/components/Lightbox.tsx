@@ -100,7 +100,7 @@ export default function Lightbox() {
 
     return (
         <section className='w-full bg-cover bg-center'>
-            <div className="mx-auto flex max-w-5xl py-2 justify-center items-center w-full opacity-0" ref={lightboxRef}>
+            <div className="mx-auto flex max-w-7xl py-2 justify-center items-center w-full opacity-0" ref={lightboxRef}>
                 <div 
                     className="w-full overflow-hidden relative flex md:min-h-[550px] min-h-[400px]"
                 >
