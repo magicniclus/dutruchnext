@@ -84,11 +84,11 @@ export default function Lightbox() {
                     setCurrentImage(newCurrentImage);
 
                     // Mettre à jour l'image suivante en fonction de la direction de l'action
-                    if (isIncrement) {
-                        setNextImage(newNextImage);
-                    } else {
-                        setNextImage(newPrevImage);
-                    }
+                    // if (isIncrement) {
+                    //     setNextImage(newNextImage);
+                    // } else {
+                    //     setNextImage(newPrevImage);
+                    // }
                     // Réactiver les interactions
                     setDisabled(false);
                 }
