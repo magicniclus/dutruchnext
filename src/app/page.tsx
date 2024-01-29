@@ -74,12 +74,6 @@ export default function Home() {
       }
   }, [showContent]); // Dépendance sur showContent
 
-  useEffect(() => {
-    console.log(validationAge);
-  }, [validationAge]);
-
-
-
   // Sélectionnez la clé de langue actuelle de l'état Redux
   type LanguageKey = 'fr' | 'eng';
   const languageKey = useSelector((state: RootState) => state.language.language) as LanguageKey;
@@ -106,9 +100,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log('Image state:', image);
     if (image === 2) {
-      console.log('Hiding loader');
       setShowLoader(false);
     } else {
       setShowLoader(true);
