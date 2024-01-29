@@ -26,7 +26,7 @@ const Nav = () => {
 
     return (
         <nav className='w-full bg-background'>
-            <div className='mx-auto flex max-w-5xl px-4 py-2 justify-between items-center opacity-0'  ref={logoRef}>
+            <div className='mx-auto flex max-w-7xl px-4 py-2 justify-between items-center opacity-0'  ref={logoRef}>
                 <div className='flex space-x-4'>
                     <a href='/' className='text-primary font-bold text-2xl sm:block hidden overflow-hidden '>
                         <Image src='/logo/logo-nav.png' alt='Château Dutruch Grand Poujeaux' width={200} height={200} />
