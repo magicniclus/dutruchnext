@@ -72,7 +72,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 uppercase  text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -149,7 +149,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 uppercase  text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -229,7 +229,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 uppercase text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -302,7 +302,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 uppercase text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -378,7 +378,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 upercase text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -451,7 +451,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 upercase text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -527,7 +527,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 uppercase text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
@@ -599,7 +599,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </a>
                                 </div>
                             </div>
-                            <div className='flex flex-col justify-around'>
+                            <div className='flex flex-col justify-around ml-5'>
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 uppercase text-[24px]'>Terroir & vignoble</h3>
                                     <ul className='font-cormorant text-text text-sm'>
