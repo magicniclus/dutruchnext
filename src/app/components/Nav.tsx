@@ -42,7 +42,7 @@ const Nav = () => {
                             ENG
                         </button>
                     </div>
-                    <a href="mailto:casteranicolas.contact@gmail.com" >
+                    <a href="#form" >
                         <Image src='/icon/envelope.png' alt='envelope' width={25} height={5} className='hover:scale-105 transition-all duration-200 cursor-pointer' />
                     </a>
                 </div>
