@@ -118,16 +118,10 @@ export default function Lightbox() {
         gsap.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 })
     }, []);
 
-    useEffect(() => {
-        preloadImage(`/lightbox/image-${currentImage}.png`);
-        preloadImage(`/lightbox/image-${nextImage}.png`);
-    }, []);
-
-    useEffect(() => {
-        console.log(`currentImageRef: ${currentImageRef.current}`);
-        console.log(`nextImageRef: ${nextImageRef.current}`);
-            console.log(`lightboxRef: ${lightboxRef.current}`);
-    }, []);
+    // useEffect(() => {
+    //     preloadImage(`/lightbox/image-${currentImage}.png`);
+    //     preloadImage(`/lightbox/image-${nextImage}.png`);
+    // }, []);
 
     return (
         <section className='w-full bg-cover bg-center'>
