@@ -655,7 +655,7 @@ const Bottles = ({lang}: BottlesProps) => {
 
     return (
         <>
-            <section className="mx-auto flex flex-col max-w-5xl py-10 px-4 min-h-[392px] w-full">
+            <section className="mx-auto flex flex-col max-w-5xl py-10 px-4 min-h-[392px] w-full" id="bottle">
                 <div className='w-full flex justify-between flex-col md:flex-row' ref={bottleRef}>
                     {bottle.map((bottle, index) => (
                         <div key={index} className='group relative flex-1 flex flex-col items-center md:w-[22%] justify-between font-bebas md:mt-0 mt-10'>
