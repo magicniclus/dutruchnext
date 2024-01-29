@@ -85,7 +85,7 @@ interface FormulaireProps {
                 );
             }
             return (
-                <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full' id="form">
+                <section className='mx-auto flex flex-col md:max-w-7xl md:px-4 w-full' id="form">
                     <div className='bg-beige w-full md:translate md:-translate-y-16 p-7'>
                         <div>
                             <h2 className="text-red font-bebas text-3xl">NOUS CONTACTER</h2>
