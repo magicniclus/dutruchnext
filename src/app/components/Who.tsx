@@ -186,7 +186,7 @@ const Who = ({ lang }: WhoProps) => {
         }
       `}</style>
       <div className={`w-full py-20 ${showBackground ? 'background-limited' : ''}`}>
-        <div className='mx-auto flex max-w-5xl py-2 px-4 min-h-[392px] w-full'>
+        <div className='mx-auto flex max-w-7xl py-2 px-4 min-h-[392px] w-full'>
           { lang === "fr" ? textFr() : textAng() }
         </div>
       </div>
