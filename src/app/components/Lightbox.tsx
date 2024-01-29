@@ -28,53 +28,84 @@ export default function Lightbox() {
     const lightboxRef = useRef(null);
     const buttonRef = useRef(null);
 
-    const handleImage = (action: string) => {
+    const preloadImage = (src: string): Promise<void> => {
+        return new Promise((resolve) => {
+            const img = new window.Image();  // Utilisez `new window.Image()` au lieu de `new Image()`
+            img.src = src;
+            img.onload = () => resolve();
+        });
+    };
+
+    const handleImage = async (action: 'increment' | 'decrement'): Promise<void> => {
+        // Désactiver les interactions (boutons, par exemple) pour éviter les clics multiples pendant l'animation
         setDisabled(true);
+
+        // Déterminer si l'action est d'incrémenter (aller vers la droite) ou de décrémenter (aller vers la gauche)
         const isIncrement = action === "increment";
-        const newCurrentImage = isIncrement ? (currentImage === 7 ? 1 : currentImage + 1) : (currentImage === 1 ? 7 : currentImage - 1);
-        
-        // Calculer la nouvelle image suivante (nextImage) et précédente (prevImage)
+
+        if(action === "increment") {
+           setNextImage(currentImage === 7 ? 1 : currentImage + 1);
+       }
+
+       if(action === "decrement") {
+           setNextImage(currentImage === 1 ? 7 : currentImage - 1);
+       }
+       
+        // Calculer la nouvelle image actuelle en fonction de l'action
+        // Si c'est la dernière image, boucler à la première image, et inversement
+        const newCurrentImage = isIncrement 
+            ? (currentImage === 7 ? 1 : currentImage + 1) 
+            : (currentImage === 1 ? 7 : currentImage - 1);
+
+        // Déterminer l'URL de la prochaine image à précharger
+        // Cette logique détermine l'image suivante si on avance, et l'image précédente si on recule
+        const imageToPreload = `/lightbox/image-${isIncrement 
+            ? (newCurrentImage === 7 ? 1 : newCurrentImage + 1) 
+            : (newCurrentImage === 1 ? 7 : newCurrentImage - 1)}.png`;
+
+        // Précharger l'image déterminée
+        await preloadImage(imageToPreload);
+
+        // Calculer les indices des images suivante et précédente pour la mise à jour future
         const newNextImage = newCurrentImage === 7 ? 1 : newCurrentImage + 1;
         const newPrevImage = newCurrentImage === 1 ? 7 : newCurrentImage - 1;
 
-        if(action === "increment") {
-            setNextImage(currentImage === 7 ? 1 : currentImage + 1);
-        }
 
-        if(action === "decrement") {
-            setNextImage(currentImage === 1 ? 7 : currentImage - 1);
-        }
 
+        // Vérifier si les éléments DOM pour les images actuelle et suivante sont présents
         if (currentImageRef.current && nextImageRef.current) {
-            // Animer l'image courante pour la faire sortir de l'écran
+            // Animer l'image actuelle pour la faire sortir de l'écran
             gsap.to(currentImageRef.current, {
-                x: isIncrement ? '100%' : '-100%', 
-                duration: 1, 
-                ease: 'power3.inOut',
+                x: isIncrement ? '100%' : '-100%', // Déplacer vers la droite ou la gauche
+                duration: 1, // Durée de l'animation
+                ease: 'power3.inOut', // Type d'animation (accélération et décélération)
                 onComplete: () => {
-                    // Mettre à jour currentImage
+                    // Une fois l'animation terminée, mettre à jour l'image actuelle
                     setCurrentImage(newCurrentImage);
-                    
-                    // Précharger la prochaine image en fonction de la direction
+
+                    // Mettre à jour l'image suivante en fonction de la direction de l'action
                     if (isIncrement) {
                         setNextImage(newNextImage);
                     } else {
                         setNextImage(newPrevImage);
                     }
+                    // Réactiver les interactions
                     setDisabled(false);
                 }
             });
 
-            // Animer l'image suivante pour qu'elle se déplace de sa position initiale à 0
+            // Préparer l'image suivante pour entrer dans l'écran
             gsap.fromTo(nextImageRef.current, {
-                x: isIncrement ? '-50%' : '50%',
+                x: isIncrement ? '-50%' : '50%', // Position de départ hors écran
             }, {
-                x: '0%', 
-                duration: 1, 
-                ease: 'power3.inOut',
+                x: '0%', // Position finale (centre de l'écran)
+                duration: 1, // Durée de l'animation
+                ease: 'power3.inOut', // Type d'animation
             });
         }
-    }
+    };
+
+
 
     useEffect(() => {
         // Réinitialiser la position de l'image courante à chaque changement de currentImage
@@ -85,17 +116,17 @@ export default function Lightbox() {
 
     useEffect(() => {
         gsap.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 })
+    }, []);
 
-    //     const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: lightboxRef.current, // Vous pourriez vouloir ajuster ceci selon le meilleur élément déclencheur
-    //       start: 'top 90%', // Ajustez selon vos besoins
-    //       toggleActions: 'play none none none',
-    //     //   markers: true
-    //     }
-    //   });
-    //   tl.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 0)
-    //     .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 1 }, 0.2) // Décalage de 0.2s
+    useEffect(() => {
+        preloadImage(`/lightbox/image-${currentImage}.png`);
+        preloadImage(`/lightbox/image-${nextImage}.png`);
+    }, []);
+
+    useEffect(() => {
+        console.log(`currentImageRef: ${currentImageRef.current}`);
+        console.log(`nextImageRef: ${nextImageRef.current}`);
+            console.log(`lightboxRef: ${lightboxRef.current}`);
     }, []);
 
     return (
