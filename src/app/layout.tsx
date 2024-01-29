@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 import "./globals.css";
 
@@ -22,12 +23,7 @@ export default function RootLayout({
       <html lang="fr">
         <head>
           <meta charSet="utf-8" />
-          <link
-            rel="icon"
-            href="/favicon.png"
-            type="image/png" 
-            sizes="32x32"
-          />
+          <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
         </head>
           <body className={inter.className}>{children}</body>
       </html>
