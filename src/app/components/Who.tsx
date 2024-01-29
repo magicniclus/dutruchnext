@@ -109,7 +109,9 @@ const Who = ({ lang }: WhoProps) => {
                     <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie permettent une maturation optimale des raisins.</li>
                 </ul>
             </div>
-            <button ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</button>
+            <div ref={buttonRef}>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</a>
+            </div>
         </section>
     )
   }
@@ -143,7 +145,7 @@ const Who = ({ lang }: WhoProps) => {
                     <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie permettent une maturation optimale des raisins.</li>
                 </ul>
             </div>
-            <button ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</button>
+            <a href="#bottle" ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</a>
         </section>
     )
   }
@@ -159,9 +161,11 @@ const Who = ({ lang }: WhoProps) => {
           right: 0;
           bottom: 0;
           opacity: 0.6;
-          background: url('/background/vigne.png') center center no-repeat;
-          background-size: 100% auto;
-          max-height: 100%; 
+          margin-top: auto;
+          margin-bottom: auto;
+          background: url('/background/vigne.png') center right no-repeat;
+          background-size: auto 100%;
+          max-height: 90%; 
           z-index: -1;
         }
         @media (max-width: 768px) {
