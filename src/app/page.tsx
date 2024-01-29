@@ -118,7 +118,7 @@ export default function Home() {
             right: 0;
             bottom: 0;
             background: url('/background/dessin-marie.jpg') top center no-repeat;
-            opacity: 0.6;
+            opacity: 0.4;
             background-size: 100% auto;
             max-height: 90%; 
             animation: background 0.5s ease-in-out 0.5s;
@@ -185,7 +185,7 @@ export default function Home() {
             <div className="relative">
               {
                 showBackground && (
-                  <img src="/background/toiture.png" alt="" className="absolute top-5 left-0 h-full w-auto -translate-y-6 object-cover md:block hidden" />
+                  <img src="/background/toiture.png" alt="" className="absolute top-5 left-0 h-full w-auto -translate-y-6 object-cover md:block hidden opacity-40" />
                 )
               }
               <Formulaire lang={languageKey} />
