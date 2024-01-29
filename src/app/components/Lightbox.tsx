@@ -84,7 +84,7 @@ export default function Lightbox() {
     }, [currentImage]);
 
     useEffect(() => {
-        gsap.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 1, delay: 1.7 })
+        gsap.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 })
 
     //     const tl = gsap.timeline({
     //     scrollTrigger: {
