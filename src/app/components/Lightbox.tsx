@@ -20,7 +20,7 @@ const textImage = [
 
 export default function Lightbox() {
     const [currentImage, setCurrentImage] = useState<number>(1);
-    const [nextImage, setNextImage] = useState<number>(2);
+    const [nextImage, setNextImage] = useState<number | null>(null);
     const [disabled, setDisabled] = useState<boolean>(false);
 
     const currentImageRef = useRef(null);
