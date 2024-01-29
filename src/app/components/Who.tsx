@@ -109,8 +109,8 @@ const Who = ({ lang }: WhoProps) => {
                     <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie permettent une maturation optimale des raisins.</li>
                 </ul>
             </div>
-            <div ref={buttonRef}>
-              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</a>
+            <div ref={buttonRef} className=' mt-10'>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px]'>DÉCOUVRIR NOS VINS</a>
             </div>
         </section>
     )
@@ -145,7 +145,9 @@ const Who = ({ lang }: WhoProps) => {
                     <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie permettent une maturation optimale des raisins.</li>
                 </ul>
             </div>
-            <a href="#bottle" ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</a>
+            <div ref={buttonRef} className=' mt-10'>
+              <a href="#bottle" ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</a>
+            </div>
         </section>
     )
   }
