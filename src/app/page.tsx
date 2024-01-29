@@ -119,15 +119,15 @@ export default function Home() {
     <>
      <style jsx>{`
           .background-limited::before {
-            content: '';
+           content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            opacity: 0.6;
             background: url('/background/dessin-marie.jpg') top center no-repeat;
-            background-size: 100% 1001;
+            opacity: 0.6;
+            background-size: 100% auto;
             max-height: 90%; 
             animation: background 0.5s ease-in-out 0.5s;
             z-index: -1;
@@ -193,7 +193,7 @@ export default function Home() {
             <div className="relative">
               {
                 showBackground && (
-                  <img src="/background/toiture.png" alt="" className="absolute -top-[0px] left-0 w-full h-[calc(100%+20px)] -translate-y-6 object-cover md:block hidden" />
+                  <img src="/background/toiture.png" alt="" className="absolute top-5 left-0 h-full w-auto -translate-y-6 object-cover md:block hidden" />
                 )
               }
               <Formulaire lang={languageKey} />
