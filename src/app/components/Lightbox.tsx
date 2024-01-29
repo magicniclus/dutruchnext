@@ -153,14 +153,14 @@ export default function Lightbox() {
                         <img
                             src={`/lightbox/image-${currentImage}.png`}
                             alt="Château Dutruch Grand Poujeaux"
-                            className="object-cover w-full"
+                            className="object-cover w-full h-full"
                         />
                     </div>
                     <div className="absolute right-0 bottom-0 w-full z-5 h-[100%]" ref={nextImageRef}>
                         <img
                             src={`/lightbox/image-${nextImage}.png`}
                             alt="Château Dutruch Grand Poujeaux"
-                            className="object-cover w-full"
+                            className="object-cover w-full h-full"
                         />
                     </div>
 
