@@ -127,7 +127,7 @@ export default function Home() {
             bottom: 0;
             opacity: 0.6;
             background: url('/background/dessin-marie.jpg') top center no-repeat;
-            background-size: 100% auto;
+            background-size: 100% 1001;
             max-height: 90%; 
             animation: background 0.5s ease-in-out 0.5s;
             z-index: -1;
