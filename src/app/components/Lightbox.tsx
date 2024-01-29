@@ -28,32 +28,6 @@ export default function Lightbox() {
     const lightboxRef = useRef(null);
     const buttonRef = useRef(null);
 
-   const [startX, setStartX] = useState<number>(0);
-
-    const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-        setStartX(e.touches[0].clientX);
-    };
-
-    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-        setStartX(e.clientX);
-    };
-
-    const handleEnd = (currentX: number) => {
-        if (currentX > startX) {
-        handleImage("increment");
-        } else if (currentX < startX) {
-        handleImage("decrement");
-        }
-    };
-
-    const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
-        handleEnd(e.changedTouches[0].clientX);
-    };
-
-    const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
-        handleEnd(e.clientX);
-    };
-
     const handleImage = (action: string) => {
         setDisabled(true);
         const isIncrement = action === "increment";
@@ -129,10 +103,6 @@ export default function Lightbox() {
             <div className="mx-auto flex max-w-5xl py-2 justify-center items-center w-full opacity-0" ref={lightboxRef}>
                 <div 
                     className="w-full overflow-hidden relative flex md:min-h-[550px] min-h-[400px]"
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
-                    onMouseDown={handleMouseDown}
-                    onMouseUp={handleMouseUp}
                 >
 
                     {/** Navigation button */}
