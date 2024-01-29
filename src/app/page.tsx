@@ -161,7 +161,7 @@ export default function Home() {
           {
             (!showContent || showContent === null) && (
               <div className={`w-full h-screen fixed bg-white md:pt-20 md:py-0 py-20 flex justify-center items-center ${showBackground ? ' backgournTwo' : ''}`} style={{zIndex: "1000"}}>
-                <div className={`mx-auto max-w-5xl py-2 px-4 justify-center items-center min-h-[392px] w-full ${!showLoader ? "opacity-100" : "opacity-0"}`} style={{zIndex: "2000"}}>
+                <div className={`mx-auto max-w-7xl py-2 px-4 justify-center items-center min-h-[392px] w-full ${!showLoader ? "opacity-100" : "opacity-0"}`} style={{zIndex: "2000"}}>
                   <div className='flex flex-col items-center'>
                       <Image src='/logo/logo-hero.png' alt='Château Dutruch Grand Poujeaux' width={300} height={200} onLoadingComplete={()=>{setImage((prev)=>prev + 1)}} />
                       <div className="mt-10 flex items-end">
