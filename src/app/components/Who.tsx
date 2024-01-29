@@ -74,36 +74,36 @@ const Who = ({ lang }: WhoProps) => {
   const textFr = ()=>{
     return (
         <section>
-            <h1 className="text-red font-bebas text-3xl opacity-0" ref={titleRef}>Grand poujeaux</h1>
-            <h2 className='font-bebas text-xl text-text  opacity-0' ref={subtitleRef}>Le meilleur terroir de moulis-en-médoc</h2>
+            <h1 className="text-red font-bebas text-[36px] opacity-0" ref={titleRef}>Grand poujeaux</h1>
+            <h2 className='font-bebas text-[24px] text-text  opacity-0' ref={subtitleRef}>Le meilleur terroir de moulis-en-médoc</h2>
             <div className='overflow-hidden'>
               <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
             </div>
-            <div ref={textRefOne} className='font-cormorant mt-10 text-text opacity-0'>
+            <div ref={textRefOne} className='font-cormorant mt-10 text-text text-[19px] opacity-0'>
                 <p className=''>
                     Situées à l’extrême Est de l’appellation Moulis, nos vignes sont plantées 
                 </p>
                 <ul>
-                    <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>à 80% sur le plateau de Grand Poujeaux, connu pour être le meilleur terroir de Moulis,</li>
-                    <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>et à 20% dans des sols argilo-calcaires et sableux.</li>
+                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>à 80% sur le plateau de Grand Poujeaux, connu pour être le meilleur terroir de Moulis,</li>
+                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à 20% dans des sols argilo-calcaires et sableux.</li>
                 </ul>
                 <p>
                     Cette diversité apporte à nos vins une grande complexité et une grande richesse.
                 </p>
             </div>
-            <div ref={textRefTwo} className='font-cormorant mt-10 opacity-0'>
+            <div ref={textRefTwo} className='font-cormorant mt-10 opacity-0 text-[19px]'>
                 <p>
                     Le terroir Grand Poujeaux doit son excellence et sa réputation prestigieuse :
                 </p>
                 <ul>
-                    <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>à ses sols de graves profondes appelés « Terrasses de type 3 » faisant partie des tous meilleurs du Médoc,</li>
-                    <li className='flex items-center'> <div className="mr-2 w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie </li>
+                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>à ses sols de graves profondes appelés « Terrasses de type 3 » faisant partie des tous meilleurs du Médoc,</li>
+                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie </li>
                 </ul>
                 <p>
                     permettent une maturation optimale des raisins.
                 </p>
             </div>
-            <button ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full normal-lg mt-10 opacity-0'>DÉCOUVRIR NOS VINS</button>
+            <button ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DÉCOUVRIR NOS VINS</button>
         </section>
     )
   }
