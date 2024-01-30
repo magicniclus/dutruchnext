@@ -107,7 +107,7 @@ interface FormulaireProps {
                                     </div>
                                     <div className='flex flex-col md:ml-10 md:w-[30%] md:mt-0 mt-3'>
                                         <label className='font-cormorant ml-2 text-text' htmlFor="name">Entreprise (le cas échéant)</label>
-                                        <input type="text" name="name" id="entreprise" placeholder='CAVE & CIE' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setEntreprise(e.target.value)} value="entreprise" />
+                                        <input type="text" name="name" id="entreprise" placeholder='CAVE & CIE' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setEntreprise(e.target.value)} value={entreptrise} />
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@ interface FormulaireProps {
                                     </div>
                                     <div className='flex flex-col md:ml-10 md:w-[30%] md:mt-0 mt-3'>
                                         <label className='font-cormorant ml-2 text-text' htmlFor="name">Entreprise (le cas échéant)</label>
-                                        <input type="text" name="name" id="entreprise" placeholder='CAVE & CIE' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setEntreprise(e.target.value)} value="entreprise" />
+                                        <input type="text" name="name" id="entreprise" placeholder='CAVE & CIE' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setEntreprise(e.target.value)} value={entreprise} />
                                     </div>
                                 </div>
                             </div>
