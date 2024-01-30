@@ -146,7 +146,7 @@ const Who = ({ lang }: WhoProps) => {
                 </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
-              <a href="#bottle" ref={buttonRef} className='text-white bg-red py-3 px-4 rounded-full text-[20px] mt-10 opacity-0'>DISCOVER OUR WINES</a>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px]'>DISCOVER OUR WINES</a>
             </div>
         </section>
     )
