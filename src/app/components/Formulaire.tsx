@@ -54,6 +54,15 @@ interface FormulaireProps {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const prospectData = {
+            prenom,
+            nom,
+            email,
+            telephone,
+            entreprise,
+            pays,
+            message,
+        };
         try {
         await addProspect({
             prenom,
@@ -65,6 +74,23 @@ interface FormulaireProps {
             message,
         });
         setIsSubmitted(true); // Mise à jour de l'état lorsque le formulaire est soumis avec succès
+        return fetch("/api/send", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(prospectData),
+          }).then((response) => {
+            if (!response.ok) {
+              return response.json().then((err) => {
+                throw new Error(err.message);
+              });
+            } else {
+              return response.json().then((data) => {
+                console.log("API Response:", data);
+              });
+            }
+          });
         } catch (error) {
         console.error("Erreur lors de l'envoi du formulaire: ", error);
         }
