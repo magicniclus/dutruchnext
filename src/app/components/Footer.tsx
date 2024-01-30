@@ -11,12 +11,12 @@ const Footer = () => {
                     </div>
                     <div className='flex flex-col md:items-end items-center md:mt-0 mt-10 justify-between min-h-full'>
                         <div className='flex'>
-                            <div className='p-3 bg-beigeDark mr-[1px]'>
+                            <a href='https://www.instagram.com/chateaudutruchgrandpoujeaux/' target='_blank' className='p-3 bg-beigeDark mr-[1px]'>
                                 <img src="/icon/insta.png" className='inline-block' />
-                            </div>
-                            <div className='p-3 bg-beigeDark'>
+                            </a>
+                            <a href="https://www.facebook.com/dutruchgrandpoujeaux/" target="_blank" className='p-3 bg-beigeDark'>
                                 <img src="/icon/fb.png" className='inline-block' />
-                            </div>
+                            </a>
                         </div>
                         <div className='flex text-white md:mt-0 mt-5'>
                             <p className='mr-5 font-source'>Ⓒ 2024</p>
