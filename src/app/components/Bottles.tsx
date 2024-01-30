@@ -57,7 +57,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a href="" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Commander sur twil.fr</p>
                                     </a>
@@ -134,7 +134,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a href="#" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Order on twil.fr</p>
                                     </a>
@@ -213,7 +213,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a  href="#" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Commander sur twil.fr</p>
                                     </a>
@@ -286,7 +286,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a href="#" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Order on twil.fr</p>
                                     </a>
@@ -362,7 +362,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3 text-[20px]'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a href="" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Commander sur twil.fr</p>
                                     </a>
@@ -435,7 +435,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a href="" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Order on twil.fr</p>
                                     </a>
@@ -512,7 +512,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3 text-[20px]'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a href="" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Commander sur twil.fr</p>
                                     </a>
@@ -584,7 +584,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a href="#" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer hover:shadow-md hover:scale-105 transition duration-300 ease-in-out'>
                                         <img src="/icon/cart.png" alt="cart" className='mr-3' />
                                         <p className='font-bebas bold text-white text-[20px]'>Order on twil.fr</p>
                                     </a>
