@@ -43,7 +43,7 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex md:items-start items'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2'>
+                            <div className='ml-2 -translate-y-3'>
                                 <h2 className="text-red font-bebas text-[36px]">Château dutruch grand poujeaux</h2>
                                 <h3 className='font-bebas text-xl text-[24px]'>Vente directe producteur</h3>
                             </div>
@@ -120,7 +120,7 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex md:items-start items'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2'>
+                            <div className='ml-2 -translate-y-3'>
                                 <h2 className="text-red font-bebas text-[36px]">Château dutruch grand poujeaux</h2>
                                 <h3 className='font-bebas text-xl text-[24px]'>Direct sales from producer</h3>
                             </div>
@@ -348,7 +348,7 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2'>
+                            <div className='ml-2 -translate-y-3'>
                                 <h2 className="text-red font-bebas text-[36px]">CUVÉE COLLECTION</h2>
                                 <h3 className='font-bebas text-xl text-[24px]'>Vente directe producteur</h3>
                             </div>
@@ -421,7 +421,7 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2'>
+                            <div className='ml-2 -translate-y-3'>
                                 <h2 className="text-red font-bebas text-[36px]">CUVÉE COLLECTION</h2>
                                 <h3 className='font-bebas text-xl text-[24px]'>Direct sales from producer</h3>
                             </div>
@@ -498,7 +498,7 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2'>
+                            <div className='ml-2 -translate-y-3'>
                                 <h2 className="text-red font-bebas text-[36px]">GAMME « PUR »</h2>
                                 <h3 className='font-bebas text-xl text-[24px]'>Vente directe producteur</h3>
                             </div>
@@ -570,7 +570,7 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2'>
+                            <div className='ml-2 -translate-y-3'>
                                 <h2 className="text-red font-bebas text-[36px]">GAMME « PUR »</h2>
                                 <h3 className='font-bebas text-xl text-[24px]'>Direct sales from producer</h3>
                             </div>
@@ -672,24 +672,56 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <img src="/icon/plus.png" alt="Plus" />
                                 </div>
                             </div>
-                           <h2 className='text-text text-center uppercase max-w-[70%] font-bold text-2xl transition-colors duration-300 ease-in-out md:group-hover:text-red'>
-                                {bottleIdx === null || bottleIdx < 0 || bottleIdx > 3 ? (
+                           <h2 className='text-text text-center uppercase max-w-[70%] font-bebas text-2xl transition-colors duration-300 ease-in-out md:group-hover:text-red'>
+                               {bottleIdx === null || bottleIdx < 0 || bottleIdx > 3 ? (
+                                <>
+                                    {index === 0 && (
+                                        <div className="leading-6">
+                                            <span>CHÂTEAU DUTRUCH</span><br /><span>GRAND POUJEAUX</span>
+                                        </div>
+                                    )}
+                                    {index === 1 && (
+                                        <div className="leading-6">
+                                            <span>LE PETIT</span><br /><span>DUTRUCH</span>
+                                        </div>
+                                    )}
+                                    {index === 2 && (
+                                        <div className="leading-6">
+                                            <span>CUVÉE</span><br /><span>COLLECTION</span>
+                                        </div>
+                                    )}
+                                    {index === 3 && (
+                                        <div className="leading-6">
+                                            <span>GAMME</span><br /><span>«PUR»</span>
+                                        </div>
+                                    )}
+                                </>
+                            ) : (
+                                index !== bottleIdx && (
                                     <>
-                                        {index === 0 && <><span>CHÂTEAU DUTRUCH</span><br /><span>GRAND POUJEAUX</span></>}
-                                        {index === 1 && <><span>LE PETIT</span><br /><span>DUTRUCH</span></>}
-                                        {index === 2 && <><span>CUVÉE</span><br /><span>COLLECTION</span></>}
-                                        {index === 3 && <><span>GAMME</span><br /><span>«PUR»</span></>}
+                                        {index === 0 && (
+                                            <div className="leading-6">
+                                                <span>CHÂTEAU DUTRUCH</span><br /><span>GRAND POUJEAUX</span>
+                                            </div>
+                                        )}
+                                        {index === 1 && (
+                                            <div className="leading-6">
+                                                <span>LE PETIT</span><br /><span>DUTRUCH</span>
+                                            </div>
+                                        )}
+                                        {index === 2 && (
+                                            <div className="leading-6">
+                                                <span>CUVÉE</span><br /><span>COLLECTION</span>
+                                            </div>
+                                        )}
+                                        {index === 3 && (
+                                            <div className="leading-6">
+                                                <span>GAMME</span><br /><span>«PUR»</span>
+                                            </div>
+                                        )}
                                     </>
-                                ) : (
-                                    index !== bottleIdx && (
-                                        <>
-                                            {index === 0 && <><span>CHÂTEAU DUTRUCH</span><br /><span>GRAND POUJEAUX</span></>}
-                                            {index === 1 && <><span>LE PETIT</span><br /><span>DUTRUCH</span></>}
-                                            {index === 2 && <><span>CUVÉE</span><br /><span>COLLECTION</span></>}
-                                            {index === 3 && <><span>GAMME</span><br /><span>«PUR»</span></>}
-                                        </>
-                                    )
-                                )}
+                                )
+                            )}
                             </h2>
                             <div className={`absolute ${index === bottleIdx ? "h-[160px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[90px]"} w-0.5 bg-red -bottom-28 md:flex hidden`}></div>
                             <div className='mx-auto flex flex-col max-w-5xl py-2 px-4 w-full'>
