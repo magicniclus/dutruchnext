@@ -39,10 +39,10 @@ const Descritpion = ({ lang }: DescriptionProps) => {
         return(
             <div className='w-full flex justify-between font-bebas md:flex-row flex-col'>
                 <div className='bg-white p-7 md:w-[48%] w-full'>
-                    <h2 className='uppercase text-red font-bebas text-[36px] ' ref={titleRef}>Château dutruch grand poujeaux</h2>
+                    <h2 className='uppercase text-red font-bebas text-[36px] h-[45px] ' ref={titleRef}>Château dutruch grand poujeaux</h2>
                     <h3 className='uppercase font-bebas text-[24px] text-text ' ref={subtitleRef}>de famille en famille</h3>
                     <div className='overflow-hidden'>
-                        <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
+                        <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRef}></div>
                     </div>
                     <ul className="mt-10 font-cormorant text-[19px]">
                         <li ref={lignTextRef} className='flex'><span className="mr-2 min-w-4 h-0.5 bg-red mt-3 "></span><span className='text-red mr-3'>XIXe</span>Création de la propriété par la famille Dutruch.</li>
@@ -57,10 +57,10 @@ const Descritpion = ({ lang }: DescriptionProps) => {
                     </ul>
                 </div>
                 <div className='bg-white p-7 md:w-[48%] w-full md:mt-0 mt-5'>
-                    <h2 className='uppercase text-red font-bebas  text-[36px] ' ref={titleRefTwo}>Préserver l’environnement</h2>
+                    <h2 className='uppercase text-red font-bebas  text-[36px]  h-[45px]' ref={titleRefTwo}>Préserver l’environnement</h2>
                     <h3 className='uppercase font-bebas  text-[24px] text-text ' ref={subtitleRefTwo}>Pour atteindre l’excellence</h3>
                     <div className='overflow-hidden'>
-                        <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRefTwo}></div>
+                        <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRefTwo}></div>
                     </div>
                     <p className='mt-10 font-cormorant text-[19px]' ref={paraphRef}>
                         Si la notion de respect du terroir est aujourd’hui souvent associée à des mesures environnementales, nous sommes attachés à une autre dimension importante qui est la mise en exergue de sa typicité : la finesse, l’élégance. La recherche perpétuelle de qualité nous pousse à nous surpasser et à tirer le meilleur de chaque millésime. Au fil des années, notre équipe a acquis un savoir-faire et une connaissance précise de nos terroirs permettant l’élaboration de grands vins. La suite de l’aventure s’inscrit depuis 2016 dans l’approfondissement de mesures environnementales pour que la seule empreinte que nous laissions soit celle de la qualité irréprochable de nos vins.
@@ -84,10 +84,10 @@ const Descritpion = ({ lang }: DescriptionProps) => {
         return(
             <div className='w-full flex justify-between font-bebas md:flex-row flex-col'>
                 <div className='bg-white p-7 md:w-[48%] w-full'>
-                    <h2 className='uppercase text-red font-bebas text-[36px] ' ref={titleRef}>Château dutruch grand poujeaux</h2>
+                    <h2 className='uppercase text-red font-bebas text-[36px] h-[45px] ' ref={titleRef}>Château dutruch grand poujeaux</h2>
                     <h3 className='uppercase font-bebas text-[24px] text-text ' ref={subtitleRef}>FROM FAMILY TO FAMILY</h3>
                     <div className='overflow-hidden'>
-                        <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
+                        <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRef}></div>
                     </div>
                     <ul className="mt-10 font-cormorant text-[19px]">
                         <li ref={lignTextRef} className='flex'><span className="mr-2 min-w-4 h-0.5 bg-red mt-3 "></span><span className='text-red mr-3'>XIXe</span>The creation of the property by the Dutruch family.</li>
@@ -102,10 +102,10 @@ const Descritpion = ({ lang }: DescriptionProps) => {
                     </ul>
                 </div>
                 <div className='bg-white p-7 md:w-[48%] w-full md:mt-0 mt-5'>
-                    <h2 className='uppercase text-red font-bebas  text-[36px] ' ref={titleRefTwo}>PRESERVING THE ENVIRONMENT</h2>
+                    <h2 className='uppercase text-red font-bebas  text-[36px] h-[45px] ' ref={titleRefTwo}>PRESERVING THE ENVIRONMENT</h2>
                     <h3 className='uppercase font-bebas  text-[24px] text-text ' ref={subtitleRefTwo}>TO ATTAIN EXCELLENCE</h3>
                     <div className='overflow-hidden'>
-                        <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRefTwo}></div>
+                        <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRefTwo}></div>
                     </div>
                     <p className='mt-10 font-cormorant text-[19px]' ref={paraphRef}>
                         If the notion of respect for the terroir is often associated with environmental measures today, we are attached to another important dimension, which is the emphasis on typicity: finesse and elegance.
