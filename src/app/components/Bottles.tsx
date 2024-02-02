@@ -397,7 +397,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 mt-4 upercase text-[24px]'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
-                                        <li className='flex items-center text-[19px]'> <div className="mr-2 w-4 h-0.5 bg-red"></div>100% barriques de chêne français</li>
+                                        <li className='flex items-center text-[19px]'> <div className="mr-2 w-4 h-0.5 bg-red"></div>18 mois dont 12 en barriques de chêne français</li>
                                         <li className='flex items-center text-[19px]'> <div className="mr-2 w-4 h-0.5 bg-red"></div>50% de barriques neuves et 50% de barriques de 1 vin</li>
                                     </ul>
                                 </div>
@@ -546,8 +546,8 @@ const Bottles = ({lang}: BottlesProps) => {
                                 <div>
                                     <h3 className='font-bebas text-xl text-text mb-1 mt-4 uppercase text-[24px]'>ÉLEVAGE</h3>
                                     <ul className='font-cormorant text-text text-sm'>
-                                        <li className='flex items-center'> <div className="mr-2 min-w-4 h-0.5 bg-red text-[19px]"></div>6 mois</li>
-                                        <li className='flex items-center'> <div className="mr-2 min-w-4 h-0.5 bg-red text-[19px]"></div>30% en amphores / 70% en barriques de 1 vin</li>
+                                        <li className='flex items-center'> <div className="mr-2 min-w-4 h-0.5 bg-red text-[19px]"></div>30% en amphonres</li>
+                                        <li className='flex items-center'> <div className="mr-2 min-w-4 h-0.5 bg-red text-[19px]"></div>70% en barriques de 1 et 2 vins</li>
                                     </ul>
                                 </div>
                             </div>
@@ -676,22 +676,22 @@ const Bottles = ({lang}: BottlesProps) => {
                                {bottleIdx === null || bottleIdx < 0 || bottleIdx > 3 ? (
                                 <>
                                     {index === 0 && (
-                                        <div className="leading-6">
+                                        <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                             <span>CHÂTEAU DUTRUCH</span><br /><span>GRAND POUJEAUX</span>
                                         </div>
                                     )}
                                     {index === 1 && (
-                                        <div className="leading-6">
+                                        <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                             <span>LE PETIT</span><br /><span>DUTRUCH</span>
                                         </div>
                                     )}
                                     {index === 2 && (
-                                        <div className="leading-6">
+                                        <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                             <span>CUVÉE</span><br /><span>COLLECTION</span>
                                         </div>
                                     )}
                                     {index === 3 && (
-                                        <div className="leading-6">
+                                        <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                             <span>GAMME</span><br /><span>«PUR»</span>
                                         </div>
                                     )}
@@ -700,22 +700,22 @@ const Bottles = ({lang}: BottlesProps) => {
                                 index !== bottleIdx && (
                                     <>
                                         {index === 0 && (
-                                            <div className="leading-6">
+                                            <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                                 <span>CHÂTEAU DUTRUCH</span><br /><span>GRAND POUJEAUX</span>
                                             </div>
                                         )}
                                         {index === 1 && (
-                                            <div className="leading-6">
+                                            <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                                 <span>LE PETIT</span><br /><span>DUTRUCH</span>
                                             </div>
                                         )}
                                         {index === 2 && (
-                                            <div className="leading-6">
+                                            <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                                 <span>CUVÉE</span><br /><span>COLLECTION</span>
                                             </div>
                                         )}
                                         {index === 3 && (
-                                            <div className="leading-6">
+                                            <div className="group-hover:transform leading-6 group-hover:translate-y-2 transition  duration-300 ease-in-out">
                                                 <span>GAMME</span><br /><span>«PUR»</span>
                                             </div>
                                         )}
