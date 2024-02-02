@@ -110,7 +110,7 @@ const Who = ({ lang }: WhoProps) => {
                 </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
-              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px] hover:shadow-md transition-all duration-150 ease-in-out hover:scale-105 font-bebas'>DÉCOUVRIR NOS VINS</a>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full font-light text-[20px] font-bebas hover:text-red hover:bg-white hover:border-2 hover:border-red transition-all duration-150 ease-in-out'>DÉCOUVRIR NOS VINS</a>
             </div>
         </section>
     )
@@ -146,7 +146,7 @@ const Who = ({ lang }: WhoProps) => {
                 </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
-              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px] font-bebas hover:shadow-md transition-all duration-150 ease-in-out hover:scale-105'>DISCOVER OUR WINES</a>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full font-light text-[20px] font-bebas hover:text-red hover:bg-white hover:border-2 hover:border-red transition-all duration-150 ease-in-out'>DISCOVER OUR WINES</a>
             </div>
         </section>
     )
