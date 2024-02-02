@@ -83,10 +83,10 @@ const Who = ({ lang }: WhoProps) => {
   const textFr = ()=>{
     return (
         <section>
-            <h1 className="text-red font-bebas text-[36px] opacity-0" ref={titleRef}>Grand poujeaux</h1>
+            <h1 className="text-red font-bebas text-[36px] opacity-0 h-[45px]" ref={titleRef}>Grand poujeaux</h1>
             <h2 className='font-bebas text-[24px] text-text  opacity-0' ref={subtitleRef}>Le meilleur terroir de moulis-en-médoc</h2>
             <div className='overflow-hidden'>
-              <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
+              <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRef}></div>
             </div>
             <div ref={textRefOne} className='font-cormorant mt-10 text-text text-[19px] opacity-0 md:w-9/12'>
                 <p className=''>
@@ -110,7 +110,7 @@ const Who = ({ lang }: WhoProps) => {
                 </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
-              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px]'>DÉCOUVRIR NOS VINS</a>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px] hover:shadow-md transition-all duration-150 ease-in-out hover:scale-105 font-bebas'>DÉCOUVRIR NOS VINS</a>
             </div>
         </section>
     )
@@ -119,10 +119,10 @@ const Who = ({ lang }: WhoProps) => {
   const textAng = ()=>{
     return (
         <section>
-            <h1 className="text-red font-bebas text-[36px] opacity-0" ref={titleRef}>Grand poujeaux</h1>
+            <h1 className="text-red font-bebas text-[36px] opacity-0 h-[45px]" ref={titleRef}>Grand poujeaux</h1>
             <h2 className='font-bebas text-[24px] text-text  opacity-0' ref={subtitleRef}>THE BEST TERROIR OF MOULIS-EN-MÉDOC</h2>
             <div className='overflow-hidden'>
-              <div className="w-[84px] h-0.5 bg-red mt-4" ref={lignRef}></div>
+              <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRef}></div>
             </div>
             <div ref={textRefOne} className='font-cormorant mt-10 text-text text-[19px] opacity-0 md:w-9/12'>
                 <p className=''>
@@ -146,7 +146,7 @@ const Who = ({ lang }: WhoProps) => {
                 </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
-              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px]'>DISCOVER OUR WINES</a>
+              <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full text-[20px] font-bebas hover:shadow-md transition-all duration-150 ease-in-out hover:scale-105'>DISCOVER OUR WINES</a>
             </div>
         </section>
     )
