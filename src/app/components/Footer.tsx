@@ -20,7 +20,7 @@ const Footer = () => {
                         </div>
                         <div className='flex text-white md:mt-0 mt-5'>
                             <p className='mr-5 font-source'>Ⓒ 2024</p>
-                            <a className='cursor-pointer font-source'>Mentions légales</a>
+                            <a href="mentions-legales" className='cursor-pointer font-source'>Mentions légales</a>
                         </div>
                     </div>
                 </div>
