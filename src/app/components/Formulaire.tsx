@@ -123,7 +123,7 @@ interface FormulaireProps {
                                 <div className='flex md:flex-row flex-col'>
                                     <div className="flex md:w-[40%] justify-between md:flex-row flex-col">
                                         <div className='flex flex-col md:mt-0'>
-                                            <label className='font-cormorant ml-2 text-text' htmlFor="name">Prenom*</label>
+                                            <label className='font-cormorant ml-2 text-text' htmlFor="name">Prénom*</label>
                                             <input type="text" name="name" id="name" placeholder='JHON' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setPrenom(e.target.value)} value={prenom} />
                                         </div>
                                         <div className='flex flex-col md:mt-0 mt-3'>
