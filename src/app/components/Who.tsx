@@ -31,24 +31,6 @@ const Who = ({ lang }: WhoProps) => {
     // Ajouter le gestionnaire d'événements pour le redimensionnement
     window.addEventListener('resize', handleResize);
 
-    //Timeline
-    // const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: textRefOne.current, // Vous pourriez vouloir ajuster ceci selon le meilleur élément déclencheur
-    //       start: 'top 90%', // Ajustez selon vos besoins
-    //       toggleActions: 'play play none none',
-    //       // markers: true
-    //     }
-    //   });
-
-    //   // Ajouter des animations à la timeline
-    //   tl.fromTo(titleRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6, delay: 0.6 }, 0)
-    //     .fromTo(subtitleRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 0.8) // Décalage de 0.2s
-    //     .fromTo(textRefOne.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1) // Décalage de 0.4s
-    //     .fromTo(textRefTwo.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.2) // Décalage de 0.6s
-    //     .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6}, 1.4) // Décalage de 0.8s
-    //     .fromTo(lignRef.current, { x: -100 }, { x: 0, duration: 0.6 }, 0.8);
-
         return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -61,25 +43,6 @@ const Who = ({ lang }: WhoProps) => {
     gsap.fromTo(lignRef.current, { x: -100 }, { x: 0, duration: 0.6, delay: 0.6 })
   }, [])
 
-  useEffect(() => {
-    // const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: textRefOne.current, // Vous pourriez vouloir ajuster ceci selon le meilleur élément déclencheur
-    //       start: 'top 70%', // Ajustez selon vos besoins
-    //       toggleActions: 'play play none none',
-    //       // markers: true
-    //     }
-    //   });
-
-    //   // Ajouter des animations à la timeline
-    //   tl.fromTo(titleRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6, delay: 0.6 }, 0)
-    //     .fromTo(subtitleRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 0.8) // Décalage de 0.2s
-    //     .fromTo(textRefOne.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1) // Décalage de 0.4s
-    //     .fromTo(textRefTwo.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.2) // Décalage de 0.6s
-    //     .fromTo(buttonRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 1.4) // Décalage de 0.8s
-    //     .fromTo(lignRef.current, { x: -100 }, { x: 0, duration: 0.6 }, 0.8);
-  }, [lang]);
-
   const textFr = ()=>{
     return (
         <section>
@@ -90,24 +53,13 @@ const Who = ({ lang }: WhoProps) => {
             </div>
             <div ref={textRefOne} className='font-cormorant mt-10 text-text text-[19px] opacity-0 md:w-9/12'>
                 <p className=''>
-                    Situées à l’extrême Est de l’appellation Moulis, nos vignes sont plantées 
-                </p>
-                <ul>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>à 80% sur le plateau de Grand Poujeaux, connu pour être le meilleur terroir de Moulis,</li>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à 20% dans des sols argilo-calcaires et sableux.</li>
-                </ul>
-                <p>
-                    Cette diversité apporte à nos vins une grande complexité et une grande richesse.
+                  Situées à l’extrême Est de l’appellation Moulis, nos vignes sont plantées à 80% sur le plateau de Grand Poujeaux, connu pour être le meilleur terroir de Moulis, et à 20% dans des sols argilo-calcaires et sableux. Cette diversité apporte à nos vins une grande complexité et une grande richesse.
                 </p>
             </div>
             <div ref={textRefTwo} className='font-cormorant mt-10 opacity-0 text-[19px]  md:w-9/12'>
                 <p>
-                    Le terroir Grand Poujeaux doit son excellence et sa réputation prestigieuse :
+                  Le terroir Grand Poujeaux doit son excellence et sa réputation prestigieuse : à ses sols de graves profondes appelés « Terrasses de type 3 » faisant partie des tous meilleurs du Médoc, et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie permettent une maturation optimale des raisins.
                 </p>
-                <ul>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>à ses sols de graves profondes appelés « Terrasses de type 3 » faisant partie des tous meilleurs du Médoc,</li>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>et à sa proximité avec l’estuaire de la Gironde dont les influences en termes de température et d’hygrométrie permettent une maturation optimale des raisins.</li>
-                </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
               <a href="#bottle" className='text-white bg-red py-3 px-4 rounded-full font-light text-[20px] font-bebas hover:text-red hover:bg-white hover:border-2 hover:border-red transition-all duration-150 ease-in-out'>DÉCOUVRIR NOS VINS</a>
@@ -129,8 +81,8 @@ const Who = ({ lang }: WhoProps) => {
                     Our vineyard is situated in the far east of the Moulis appellation
                 </p>
                 <ul>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>80% on the Grand Poujeaux plateau, recognized as the best terroir of Moulis,</li>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>20% on clay-limestone and sandy soils.</li>
+                    <li className='flex items-start'>80% on the Grand Poujeaux plateau, recognized as the best terroir of Moulis,</li>
+                    <li className='flex items-start'>20% on clay-limestone and sandy soils.</li>
                 </ul>
                 <p>
                     This diversity of terroir brings great complexity and richness to our wines.
@@ -141,8 +93,8 @@ const Who = ({ lang }: WhoProps) => {
                     The terroir of Grand Poujeaux owes its reputation to :
                 </p>
                 <ul>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>its deep gravel soils called “Type 3 terraces”, being some of the very best in the Medoc,</li>
-                    <li className='flex items-start'> <div className="mr-2 mt-4 min-w-4 h-0.5 bg-red"></div>its proximity to the Gironde, whose influence in terms of temperature and humidity allow for optimal ripening of the grapes.</li>
+                    <li className='flex items-start'>its deep gravel soils called “Type 3 terraces”, being some of the very best in the Medoc,</li>
+                    <li className='flex items-start'>its proximity to the Gironde, whose influence in terms of temperature and humidity allow for optimal ripening of the grapes.</li>
                 </ul>
             </div>
             <div ref={buttonRef} className=' mt-10'>
