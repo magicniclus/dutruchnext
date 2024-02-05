@@ -33,7 +33,11 @@ export default async (req, res) => {
     );
 
     const msg = {
-      to: "s.olivar@chateaudutruch.com", // Assurez-vous que cette adresse est valide
+      to: [
+        "s.olivar@chateaudutruch.com",
+        "contact@chateaudutruch.com",
+        "t.bastide@chateaudutruch.com",
+      ], // Assurez-vous que cette adresse est valide
       from: "contact@chateaudutruch.com",
       subject: "Nouvelle demande reçue depuis votre site web !",
       html: emailContent,
