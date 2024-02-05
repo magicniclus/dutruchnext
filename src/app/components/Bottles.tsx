@@ -60,7 +60,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Vous êtes un particulier</p>
                                     </div>
                                     <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3'  />
                                         <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
                                     </a>
                                 </div>
