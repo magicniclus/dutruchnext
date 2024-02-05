@@ -43,11 +43,11 @@ const Bottles = ({lang}: BottlesProps) => {
             return (
                 <>
                     <div className="flex flex-col">
-                        <div className='flex md:items-start items'>
+                        <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2 -translate-y-3'>
-                                <h2 className="text-red font-bebas text-[36px]">Château dutruch grand poujeaux</h2>
-                                <h3 className='font-bebas text-xl text-[24px]'>Vente directe producteur</h3>
+                            <div className='ml-2'>
+                                <h2 className="text-red font-bebas text-3xl text-[36px]">Château dutruch grand poujeaux</h2>
+                                <h3 className='font-bebas text-xl text-text text-[24px]'>Vente directe producteur</h3>
                             </div>
                         </div>
                         <p className='text-red font-cormorant mt-5 text-[20px] font-bold'>Porte drapeau de la propriété, il est l’expression même de notre terroir. Fruit d’un assemblage à dominance de Cabernet-Sauvignon au style des grands vins du Médoc, il se démarque par sa fraîcheur, sa finesse et son élégance.</p>
@@ -120,11 +120,11 @@ const Bottles = ({lang}: BottlesProps) => {
             return (
                              <>
                     <div className="flex flex-col">
-                        <div className='flex md:items-start items'>
+                        <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2 -translate-y-3'>
-                                <h2 className="text-red font-bebas text-[36px]">Château dutruch grand poujeaux</h2>
-                                <h3 className='font-bebas text-xl text-[24px]'>Direct sales from producer</h3>
+                            <div className='ml-2'>
+                                <h2 className="text-red font-bebas text-3xl text-[36px]">Château dutruch grand poujeaux</h2>
+                                <h3 className='font-bebas text-xl text-text text-[24px]'>Direct sales from producer</h3>
                             </div>
                         </div>
                         <p className='text-red font-cormorant mt-5 text-[20px] font-bold'>A pure expression of our terroir. A cabernet-based blend with great Medoc style, which stands out by its freshness, finesse and elegance.</p>
@@ -350,9 +350,9 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2 -translate-y-3'>
-                                <h2 className="text-red font-bebas text-[36px]">CUVÉE COLLECTION</h2>
-                                <h3 className='font-bebas text-xl text-[24px]'>Vente directe producteur</h3>
+                            <div className='ml-2'>
+                                <h2 className="text-red font-bebas text-3xl text-[36px]">CUVÉE COLLECTION</h2>
+                                <h3 className='font-bebas text-xl text-text text-[24px]'>Vente directe producteur</h3>
                             </div>
                         </div>
                         <p className='text-red font-cormorant mt-5 font-bold text-[20px]'>La cuvée Collection est née de notre envie d’explorer le plein potentiel de nos grands terroirs sur des millésimes exceptionnels. C’est une cuvée haut de gamme pour laquelle nous sommes partis à la recherche de la perfection. Chaque bouteille est unique et numérotée.</p>
@@ -423,9 +423,9 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2 -translate-y-3'>
-                                <h2 className="text-red font-bebas text-[36px]">CUVÉE COLLECTION</h2>
-                                <h3 className='font-bebas text-xl text-[24px]'>Direct sales from producer</h3>
+                            <div className='ml-2'>
+                                <h2 className="text-red font-bebas text-3xl text-[36px]">CUVÉE COLLECTION</h2>
+                                <h3 className='font-bebas text-xl text-text text-[24px]'>Direct sales from producer</h3>
                             </div>
                         </div>
                         <p className='text-red font-cormorant mt-5 font-bold text-[20px]'>The Cuvée Collection was born from our desire to realise the full potential of our great terroirs in exceptional vintages. It is a top-of-the-range vintage for which we set out in search of perfection.<br/><span className='mt-3 inline-block'>Each bottle is unique and numbered.</span></p>
@@ -500,9 +500,9 @@ const Bottles = ({lang}: BottlesProps) => {
                     <div className="flex flex-col">
                         <div className='flex'>
                             <img src="/logo/independant.png" alt="producteur indépendant" className="h-[66px] w-auto" />
-                            <div className='ml-2 -translate-y-3'>
-                                <h2 className="text-red font-bebas text-[36px]">GAMME « PUR »</h2>
-                                <h3 className='font-bebas text-xl text-[24px]'>Vente directe producteur</h3>
+                            <div className='ml-2'>
+                                <h2 className="text-red font-bebas text-3xl text-[36px]">GAMME « PUR »</h2>
+                                <h3 className='font-bebas text-xl text-text text-[24px]'>Vente directe producteur</h3>
                             </div>
                         </div>
                         <p className='text-red font-cormorant mt-5 font-bold text-[20px]'>La gamme « pur » est un exercice de style, une volonté de mettre en avant un ou plusieurs cépages par millésime. Tel un pantone, dont l’étiquette s’inspire, chaque lot est notre définition du cépage mis en avant, de sa typicité et de ses caractéristiques variétales.</p>
