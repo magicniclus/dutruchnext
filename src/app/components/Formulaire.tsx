@@ -168,7 +168,7 @@ interface FormulaireProps {
                             <div className='mt-5 text-text text-sm flex justify-between md:flex-row flex-col'>
                                 <div className='md:w-1/2 border-none'>
                                     <input type="checkbox" name="checkbox" id="checkbox" className='mr-2' onChange={e=>setCheckbox(e.target.checked)} checked={checkbox}  />
-                                    <label className='font-cormorant text-text' htmlFor="checkbox">J’accepte que mes données personnelles soient collectées afin que CHÂTEAU DUTRUCH GRAND POUJEAUX puisse me recontacter.</label>
+                                    <label className='font-cormorant text-text' htmlFor="checkbox">J’accepte que mes données personnelles soient collectées afin que Château Dutruch Grand Poujeaux puisse me recontacter.</label>
                                 </div>
                                 <div className='md:w-[220px] flex md:items-end text-text justify-between md:flex-row flex-col md:mt-0 mt-5'>
                                     <p className='text-xs font-cormorant md:mb-0 mb-2'>*Champs obligatoires</p>
@@ -258,7 +258,7 @@ interface FormulaireProps {
                             <div className='mt-5 text-text text-sm flex justify-between md:flex-row flex-col'>
                                 <div className='md:w-1/2 border-none'>
                                     <input type="checkbox" name="checkbox" id="checkbox" className='mr-2' onChange={e=>setCheckbox(e.target.checked)} checked={checkbox}  />
-                                    <label className='font-cormorant text-text' htmlFor="checkbox">I accept that my personal data will be collected so that CHÂTEAU DUTRUCH GRAND POUJEAUX can contact me again.</label>
+                                    <label className='font-cormorant text-text' htmlFor="checkbox">I accept that my personal data will be collected so that Château Dutruch Grand Poujeaux can contact me again.</label>
                                 </div>
                                 <div className='md:w-[220px] flex md:items-end text-text justify-between md:flex-row flex-col md:mt-0 mt-5'>
                                     <p className='text-xs font-cormorant md:mb-0 mb-2'>*Required fields</p>
