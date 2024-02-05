@@ -3,9 +3,7 @@ import ReactDOMServer from "react-dom/server"; // Assurez-vous d'avoir react-dom
 import sgMail from "@sendgrid/mail";
 
 // Configurez SendGrid avec votre clé API
-sgMail.setApiKey(
-  "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"
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
   try {
@@ -35,9 +33,9 @@ export default async (req, res) => {
     );
 
     const msg = {
-      to: "casteranicolas.contact@gmail.com", // Assurez-vous que cette adresse est valide
-      from: "contact@maprimerenov-info.org",
-      subject: "Nouvelle demande sur votre site web !",
+      to: "s.olivar@chateaudutruch.com", // Assurez-vous que cette adresse est valide
+      from: "contact@chateaudutruch.com",
+      subject: "Nouvelle demande reçue depuis votre site web !",
       html: emailContent,
     };
 
