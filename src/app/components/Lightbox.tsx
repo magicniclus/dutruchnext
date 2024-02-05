@@ -12,11 +12,14 @@ const textImage = [
     "Des vignes plantées à 80% Sur le plateau de Grand Poujeaux",
     "Des vendanges 100% manuelles Pour notre premier vin",
     "Sol de graves garonnaises, meilleur terroir du médoc",
-    "François cordonnier (junior), propriétaire depuis 2016",
+    "François cordonnier, propriétaire depuis 2016",
     "Élevage en barriques De chêne français",
-    "Château dutruch Grand Poujeaux : Fraîcheur, finesse et élégance",
+    "Château dutruch Grand Poujeaux",
     "Propriété du château Dutruch Grand Poujeaux"
 ]
+
+// Typage explicite pour la direction du changement d'image
+type Direction = 'increment' | 'decrement';
 
 export default function Lightbox() {
     const [currentImage, setCurrentImage] = useState<number>(1);
@@ -70,8 +73,6 @@ export default function Lightbox() {
         const newNextImage = newCurrentImage === 7 ? 1 : newCurrentImage + 1;
         const newPrevImage = newCurrentImage === 1 ? 7 : newCurrentImage - 1;
 
-
-
         // Vérifier si les éléments DOM pour les images actuelle et suivante sont présents
         if (currentImageRef.current && nextImageRef.current) {
             // Animer l'image actuelle pour la faire sortir de l'écran
@@ -82,14 +83,6 @@ export default function Lightbox() {
                 onComplete: () => {
                     // Une fois l'animation terminée, mettre à jour l'image actuelle
                     setCurrentImage(newCurrentImage);
-
-                    // Mettre à jour l'image suivante en fonction de la direction de l'action
-                    // if (isIncrement) {
-                    //     setNextImage(newNextImage);
-                    // } else {
-                    //     setNextImage(newPrevImage);
-                    // }
-                    // Réactiver les interactions
                     setDisabled(false);
                 }
             });
@@ -105,8 +98,6 @@ export default function Lightbox() {
         }
     };
 
-
-
     useEffect(() => {
         // Réinitialiser la position de l'image courante à chaque changement de currentImage
         if (currentImageRef.current) {
@@ -118,10 +109,26 @@ export default function Lightbox() {
         gsap.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 0.6 })
     }, []);
 
-    // useEffect(() => {
-    //     preloadImage(`/lightbox/image-${currentImage}.png`);
-    //     preloadImage(`/lightbox/image-${nextImage}.png`);
-    // }, []);
+   const handleImageChange = (direction: Direction): void => {
+        setDisabled(true); // Désactiver le bouton pendant l'animation
+
+        // Calculer la nouvelle image
+        let newImage: number = direction === 'increment' ? currentImage + 1 : currentImage - 1;
+        // Boucler les images
+        if (newImage > 7) newImage = 1;
+        if (newImage < 1) newImage = 7;
+
+        setCurrentImage(newImage);
+        setDisabled(false); // Réactiver le bouton après le changement d'image
+    };
+
+    useEffect(() => {
+        const interval: NodeJS.Timeout = setInterval(() => {
+            handleImage('increment'); // Changer automatiquement l'image toutes les 3 secondes
+        }, 3000); // Définir le délai de défilement automatique à 3000 ms (3 secondes)
+
+        return () => clearInterval(interval); // Nettoyer l'intervalle lors du démontage du composant
+    }, [currentImage]);
 
     return (
         <section className='w-full bg-cover bg-center'>
