@@ -59,18 +59,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3'  />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group md:max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition-all duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'  />
+                                        <p className='font-bebas text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p className='  text-[20px]'>Vous êtes un professionnel</p>
                                     </div>
-                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
+                                    <a href="#form" className='md:max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
                                     </a>
                                 </div>
                             </div>
@@ -106,8 +106,8 @@ const Bottles = ({lang}: BottlesProps) => {
                             <p className='font-cormorant text-text text-[19px]'>
                                 Si le boisé du chêne français est indispensable à la précision et la structure tannique, il est essentiel pour nous qu’il ne soit qu’un support à l’expression du vin et non l’inverse.
                                 <ul className=''>
-                                     <li className='flex items-start'> <div className="mr-2 min-w-4 h-0.5 bg-red mt-3"></div>Dans sa jeunesse, le Château Dutruch Grand Poujeaux présente des arômes de fruits rouges et noirs frais et croquants, avec de subtiles notes grillées et torréfiées. La bouche est suave, fraîche et précise. Les tanins, présents mais bien intégrés, sont d’une grande persistance.</li>
-                                    <li className='flex items-start'> <div className="mr-2 min-w-4 h-0.5 bg-red mt-3"></div>Avec l’âge, l’aromatique évolue vers des notes truffées, animales et mentholées.
+                                     <li className='flex items-start mt-3'>Dans sa jeunesse, le Château Dutruch Grand Poujeaux présente des arômes de fruits rouges et noirs frais et croquants, avec de subtiles notes grillées et torréfiées. La bouche est suave, fraîche et précise. Les tanins, présents mais bien intégrés, sont d’une grande persistance.</li>
+                                    <li className='flex items-start mt-3'>Avec l’âge, l’aromatique évolue vers des notes truffées, animales et mentholées.
                                         Nous vous conseillons d’attendre au minimum 3 à 5 ans, mais le potentiel de garde peut être impressionnant en fonction des millésimes.</li>
                                 </ul>
                             </p>
@@ -136,18 +136,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
+                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p className='  text-[20px]'>Are you a professional</p>
                                     </div>
-                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
                                     </a>
                                 </div>
                             </div>
@@ -183,8 +183,8 @@ const Bottles = ({lang}: BottlesProps) => {
                             <p className='font-cormorant text-text text-[19px]'>
                                 Whilst the oak character is fundamental because it provides precision and tannic structure, it is essential for us that the oak only supports the expression of the wine and not the other way around.
                                 <ul className=''>
-                                     <li className='flex items-start'> <div className="mr-2 min-w-4 h-0.5 bg-red mt-3"></div>In its youth, Château Dutruch Grand Poujeaux presents aromas dominated by intense red and black fruits, with subtle underlying toasted and roasted notes. On the palate it is smooth yet precise, with great depth of fruit and perfect balancing acidity. The tannins, present but well integrated, are ripe and persistent.</li>
-                                    <li className='flex items-start'> <div className="mr-2 min-w-4 h-0.5 bg-red mt-3"></div>With age, the flavours develop and become more complex, with aromatic notes such as menthol and truffle.</li>
+                                     <li className='flex items-start mt-3'>In its youth, Château Dutruch Grand Poujeaux presents aromas dominated by intense red and black fruits, with subtle underlying toasted and roasted notes. On the palate it is smooth yet precise, with great depth of fruit and perfect balancing acidity. The tannins, present but well integrated, are ripe and persistent.</li>
+                                    <li className='flex items-start mt-3'>With age, the flavours develop and become more complex, with aromatic notes such as menthol and truffle.</li>
                                 </ul>
                             </p>
                         </div>
@@ -215,18 +215,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Vous êtes un professionnel</p>
                                     </div>
-                                   <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
+                                   <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
                                     </a>
                                 </div>
                             </div>
@@ -288,18 +288,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                     <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
+                                     <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p className='  text-[20px]'>Are you a professional</p>
                                     </div>
-                                     <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                     <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
                                     </a>
                                 </div>
                             </div>
@@ -364,18 +364,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3 text-[20px]'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
+                                    <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3 text-[20px]'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p>Vous êtes un professionnel</p>
                                     </div>
-                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
+                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
                                     </a>
                                 </div>
                             </div>
@@ -437,18 +437,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
+                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
                                     </a>
                                 </div>
                                  <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p className='  text-[20px]'>Are you a professional</p>
                                     </div>
-                                   <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                   <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
                                     </a>
                                 </div>
                             </div>
@@ -514,18 +514,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3 text-[20px]'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p>Vous êtes un particulier</p>
                                     </div>
-                                     <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
+                                     <a href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Commander sur twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3 text-[20px]'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p>Vous êtes un professionnel</p>
                                     </div>
-                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
+                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
                                     </a>
                                 </div>
                             </div>
@@ -586,18 +586,18 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red text-[20px]"></div><p>Are you an individual</p>
                                     </div>
-                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <ShoppingCartIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
+                                    <a  href="https://www.twil.fr/france/bordeaux/chateau-dutruch-grand-poujeaux.html" target="_blank" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <ShoppingCartIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>Order on twil.fr</p>
                                     </a>
                                 </div>
                                 <div className='flex flex-col font-cormorant text-text mb-10 md:mt-0 mt-5'>
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p className='  text-[20px]'>Are you a professional</p>
                                     </div>
-                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out hover:bg-white hover:border-2 hover:border-red'>
-                                        <EnvelopeIcon className='h-6 w-6 text-white group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                        <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
                                     </a>
                                 </div>
                             </div>
@@ -725,7 +725,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                 )
                             )}
                             </h2>
-                            <div className={`absolute ${index === bottleIdx ? "h-[160px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[90px]"} w-0.5 bg-red -bottom-28 md:flex hidden`}></div>
+                            <div className={`absolute ${index === bottleIdx ? "h-[160px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[120px]"} w-0.5 bg-red -bottom-32 md:flex hidden`}></div>
                             <div className='mx-auto flex flex-col max-w-5xl py-2 px-4 w-full'>
                                 {
                                     bottleIdx !== null && bottleIdx === index && (
