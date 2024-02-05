@@ -131,7 +131,7 @@ interface FormulaireProps {
                                             <input type="text" name="name" id="lastName" placeholder='DOE' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setNom(e.target.value)} value={nom} />
                                         </div>
                                     </div>
-                                    <div className='flex flex-col md:ml-10 md:w-[30%] md:mt-0 mt-3'>
+                                    <div className='flex flex-col md:ml-10 md:w-[30%] md:mt-0 mt-3-'>
                                         <label className='font-cormorant ml-2 text-text' htmlFor="name">Entreprise (le cas échéant)</label>
                                         <input type="text" name="name" id="entreprise" placeholder='CAVE & CIE' className='text-sm p-2 text-source rounded-sm' onChange={(e)=>setEntreprise(e.target.value)} value={entreprise} />
                                     </div>
