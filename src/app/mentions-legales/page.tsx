@@ -10,7 +10,7 @@ const page = () => {
             <header>
                 <Nav />
             </header>
-            <main className=" max-w-7xl px-7 py-2 text-text font-cormorant mb-5">
+            <main className=" max-w-7xl px-7 py-2 text-text font-cormorant mb-5 mx-auto">
                 <h1 className='text-[24px] font-bold mt-5'>Mentions légales</h1>
                 <div>
                     <h2 className=" text-[20px] font-bold mt-5">ÉDITION</h2>
