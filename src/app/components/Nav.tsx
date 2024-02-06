@@ -29,7 +29,7 @@ const Nav = () => {
             <div className='mx-auto flex max-w-7xl px-4 py-2 justify-between items-center opacity-0'  ref={logoRef}>
                 <div className='flex space-x-4'>
                     <a href='/' className='text-primary font-bold text-2xl sm:block hidden overflow-hidden '>
-                        <Image src='/logo/logo-nav.png' alt='Château Dutruch Grand Poujeaux' width={200} height={200} />
+                        <img src='/logo/logo-nav.png' alt='Château Dutruch Grand Poujeaux' className="w-[200px] h-auto" />
                     </a>
                 </div>
                 <div className='flex space-x-4'>
@@ -43,7 +43,7 @@ const Nav = () => {
                         </button>
                     </div>
                     <a href="/#form" >
-                        <Image src='/icon/envelope.png' alt='envelope' width={25} height={5} className='hover:scale-105 transition-all duration-200 cursor-pointer' />
+                        <img src='/icon/envelope.png' alt='envelope' className='hover:scale-105 transition-all duration-200 cursor-pointer w-[25px] h-auto' />
                     </a>
                 </div>
             </div>
