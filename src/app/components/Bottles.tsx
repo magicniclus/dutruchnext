@@ -75,7 +75,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     <div className='flex items-center mb-3'>
                                         <div className="mr-2 w-4 h-0.5 bg-red"></div><p className='  text-[20px]'>Vous êtes un professionnel</p>
                                     </div>
-                                    <a href="#form" className='md:max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
+                                     <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
                                         <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
                                         <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contacter le château</p>
                                     </a>
@@ -154,7 +154,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </div>
                                     <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
                                         <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the winery</p>
                                     </a>
                                 </div>
                             </div>
@@ -306,7 +306,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </div>
                                      <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
                                         <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the winery</p>
                                     </a>
                                 </div>
                             </div>
@@ -455,7 +455,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </div>
                                    <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
                                         <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the winery</p>
                                     </a>
                                 </div>
                             </div>
@@ -604,7 +604,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     </div>
                                     <a href="#form" className='group max-w-64 justify-center flex bg-red px-5 py-2 rounded-full items-center cursor-pointer transition duration-300 ease-in-out md:hover:bg-white md:hover:border-2 md:hover:border-red'>
                                         <EnvelopeIcon className='h-6 w-6 text-white md:group-hover:text-red transition-all duration-300 ease-in-out mr-3' />
-                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the castle</p>
+                                        <p className='font-bebas bold text-white text-[18px] md:group-hover:text-red transition-all duration-300 ease-in-out mr-3'>contact the winery</p>
                                     </a>
                                 </div>
                             </div>
