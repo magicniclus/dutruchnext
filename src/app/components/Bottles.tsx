@@ -738,7 +738,7 @@ const Bottles = ({lang}: BottlesProps) => {
                                     bottleIdx !== null && bottleIdx === index && (
                                         <div className={`md:hidden relative w-full min-h-[500px] border border-red mx-auto flex max-w-5xl p-5 mt-10 bg-white z-10 transition duration-150 ease-in-out ${bottleIdx !== null ? "opacity-100" : "opacity-0" }`} ref={bottleDescriptionRef}>
                                             <div className={`absolute ${index === bottleIdx ? "h-[50px]" : bottleIdx !== null && bottleIdx !== index ? "" : "h-[50px]"} w-0.5 bg-red -top-[50px] md:hidden flex left-1/2 transform -translate-x-1/2 `}></div>
-                                            <div className='absolute p-1 top-3 md:top-5 right-3 md:right-5 rounded-full border border-red cursor-pointer hover:scale-105 transition duration-300 ease-in-out' onClick={()=>{setBottleIdx(null)}}><img src="/icon/close.png" /></div>
+                                            <div className='absolute p-1 top-3 md:top-2 right-2 md:right-5 rounded-full border border-red cursor-pointer hover:scale-105 transition duration-300 ease-in-out' onClick={()=>{setBottleIdx(null)}}><img src="/icon/close.png" /></div>
                                             {
                                                 handleBottleText(bottleIdx)
                                             }   
