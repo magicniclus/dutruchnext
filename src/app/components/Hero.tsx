@@ -33,14 +33,14 @@ const Hero = () => {
             <div className='mx-auto flex max-w-5xl py-2 px-4 justify-center items-center min-h-[392px] w-full'>
                 <div className='flex flex-col items-center'>
                     <div className='overflow-hidden'>
-                        <Image src='/logo/logo-hero.png' alt='Château Dutruch Grand Poujeaux' width={300} height={200} ref={imageRefOne} className='opacity-0' />
+                        <img src='/logo/logo-hero.png' alt='Château Dutruch Grand Poujeaux' width={300} height={200} ref={imageRefOne} className='opacity-0 w-[300px] h-auto' />
                     </div>
                     <div className="mt-10 flex items-end">
                         <div className='overflow-hidden'>
                             <div className='w-14 h-0.5 bg-red mb-1 -translate-x-20' ref={lignOne}></div>
                         </div>
                         <div className='overflow-hidden'>
-                            <Image src='/logo/logo-moulis-medoc.png' alt='moulis-en-medoc' width={150} height={50} className='mr-3 ml-3 translate-y-48' ref={imageRefTwo} />
+                            <img src='/logo/logo-moulis-medoc.png' alt='moulis-en-medoc' className='mr-3 ml-3 translate-y-48 w-[150px] h-auto' ref={imageRefTwo} />
                         </div>
                         <div className='overflow-hidden'>
                             <div className='w-14 h-0.5 bg-red mb-1 translate-x-20' ref={lignTwo}></div>
