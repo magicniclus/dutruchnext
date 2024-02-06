@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { addProspect } from '@/firebase/dataManager';
 
@@ -8,6 +8,7 @@ interface FormulaireProps {
 }
 
     const Formulaire = ({lang}: FormulaireProps) => {
+        const formRef = useRef<HTMLDivElement>(null);
 
         const [isSubmitted, setIsSubmitted] = useState(false);
         const [showBackground, setShowBackground] = useState(false);
@@ -96,11 +97,18 @@ interface FormulaireProps {
         }
     };
 
+    useEffect(() => {
+            if (isSubmitted) {
+                // Assurez-vous que formRef.current n'est pas null avant d'appeler scrollIntoView
+                formRef.current?.scrollIntoView({ behavior: "smooth" });
+            }
+        }, [isSubmitted]); 
+
     const handleForm = () => {
         if(lang === 'fr'){
             if(isSubmitted){
                 return (
-                    <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full'>
+                    <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full' id="form" ref={formRef}>
                         <div className='bg-beige w-full md:translate md:-translate-y-16 p-16'>
                             <div className='w-full flex justify-center items-center flex-col'>
                                 <h2 className="text-red font-bebas text-3xl">Merci de nous avoir contacté</h2>
@@ -189,7 +197,7 @@ interface FormulaireProps {
         }else{
             if(isSubmitted){
                 return (
-                    <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full'>
+                    <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full' ref={formRef}>
                         <div className='bg-beige w-full md:translate md:-translate-y-16 p-7'>
                             <div>
                                 <h2 className="text-red font-bebas text-3xl">Thank you for having contacted us</h2>
@@ -201,7 +209,7 @@ interface FormulaireProps {
                 );
             }
             return (
-                              <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full'>
+                <section className='mx-auto flex flex-col md:max-w-5xl md:px-4 w-full'>
                     <div className='bg-beige w-full md:translate md:-translate-y-16 p-7'>
                         <div>
                             <h2 className="text-red font-bebas text-3xl">CONTACT US</h2>
