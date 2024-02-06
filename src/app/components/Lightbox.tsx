@@ -139,19 +139,17 @@ export default function Lightbox() {
 
                     {/** Navigation button */}
                     <button className="absolute py-3 px-5 rounded-l-full bg-white right-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("increment")} disabled={disabled}>
-                        <Image
+                        <img
                             src="/icon/arrow-right.png"
                             alt="Château Dutruch Grand Poujeaux"
-                            width={12}
-                            height={12}
+                            className="w-[12px] h-auto"
                         />
                     </button>
                     <button className="absolute py-3 px-5 rounded-r-full bg-white left-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-20" onClick={()=>handleImage("decrement")} disabled={disabled}>
-                        <Image
+                        <img
                             src="/icon/arrow-left.png"
                             alt="Château Dutruch Grand Poujeaux"
-                            width={12}
-                            height={12}
+                            className="w-[12px] h-auto"
                         />
                     </button>
 
