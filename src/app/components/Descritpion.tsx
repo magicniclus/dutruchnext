@@ -57,7 +57,7 @@ const Descritpion = ({ lang }: DescriptionProps) => {
                     </ul>
                 </div>
                 <div className='bg-white p-7 md:w-[48%] w-full md:mt-0 mt-5'>
-                    <h2 className='uppercase text-red font-bebas  text-[36px]  h-[45px]' ref={titleRefTwo}>Préserver l’environnement</h2>
+                    <h2 className='uppercase text-red font-bebas  text-[36px]  md:h-[45px]' ref={titleRefTwo}>Préserver l’environnement</h2>
                     <h3 className='uppercase font-bebas  text-[24px] text-text ' ref={subtitleRefTwo}>Pour atteindre l’excellence</h3>
                     <div className='overflow-hidden'>
                         <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRefTwo}></div>
@@ -72,7 +72,7 @@ const Descritpion = ({ lang }: DescriptionProps) => {
                             </p>
                         </div>
                         <div ref={logoRef}>
-                            <Image src='/logo/logo-HVE.png' alt="HVE" width={120} height={100} />
+                            <img src='/logo/logo-HVE.png' alt="HVE"className="w-[120px] h-auto" />
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ const Descritpion = ({ lang }: DescriptionProps) => {
                             </p>
                         </div>
                         <div ref={logoRef}>
-                            <Image src='/logo/logo-HVE.png' alt="HVE" width={120} height={100} />
+                           <img src='/logo/logo-HVE.png' alt="HVE"className="w-[120px] h-auto" />
                         </div>
                     </div>
                 </div>
