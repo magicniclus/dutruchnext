@@ -102,7 +102,7 @@ const Descritpion = ({ lang }: DescriptionProps) => {
                     </ul>
                 </div>
                 <div className='bg-white p-7 md:w-[48%] w-full md:mt-0 mt-5'>
-                    <h2 className='uppercase text-red font-bebas  text-[36px] h-[45px] ' ref={titleRefTwo}>PRESERVING THE ENVIRONMENT</h2>
+                    <h2 className='uppercase text-red font-bebas  text-[36px] md:h-[45px] ' ref={titleRefTwo}>PRESERVING THE ENVIRONMENT</h2>
                     <h3 className='uppercase font-bebas  text-[24px] text-text ' ref={subtitleRefTwo}>TO ATTAIN EXCELLENCE</h3>
                     <div className='overflow-hidden'>
                         <div className="w-[84px] h-0.5 bg-red mt-2" ref={lignRefTwo}></div>
